@@ -1,0 +1,235 @@
+{
+  "product": "PhatMT",
+  "files": [
+    {
+      "file": "app/public/ambient-music.js",
+      "bytes": 1758,
+      "sha256": "e2fc64fd6428ccfe367ff2bf964d98c0cfe898ecfb7402951bedb529b9fe6eb4"
+    },
+    {
+      "file": "app/public/anime-poses.mjs",
+      "bytes": 680,
+      "sha256": "eae6c86d585b5aa04cc7006215c67d9e8c8cd54c334ed01c56a63f10e3739df2"
+    },
+    {
+      "file": "app/public/assets/female-bow.png",
+      "bytes": 1249613,
+      "sha256": "bbf9c21de63d9b2f994b17715516585b992dc4299caa76ebf18e99f5b97e2553"
+    },
+    {
+      "file": "app/public/assets/female-standing.png",
+      "bytes": 883048,
+      "sha256": "86d88a111816f851ad5c9b09c6026c9e4968af0bd972ba69ec06e11e76da8391"
+    },
+    {
+      "file": "app/public/assets/female-walk.png",
+      "bytes": 902014,
+      "sha256": "06cfc92eb543bf140780540fff334ff966c4dd33dc1852c4fd1f7de36ddebe55"
+    },
+    {
+      "file": "app/public/assets/golden-lotus.svg",
+      "bytes": 1171,
+      "sha256": "393b9e5b25d107796725c1508273aaa076bfc02b301ce6c87028267e60201b62"
+    },
+    {
+      "file": "app/public/assets/lotus-cushion.svg",
+      "bytes": 1349,
+      "sha256": "deacccb6eb20e0e04adf4d5addb69b24effc2ee287be9ffd99895f52a5478af1"
+    },
+    {
+      "file": "app/public/assets/luxury-cushion.svg",
+      "bytes": 1543,
+      "sha256": "f22a0b04f178cd0dfdc6b62970286ce9dbff6881f618f7015045727734176967"
+    },
+    {
+      "file": "app/public/assets/peach-blossom.svg",
+      "bytes": 779,
+      "sha256": "827bce8d0deb0bbc31f80b818c24dd92bf5252e271c565df458f10abbc3e3ad0"
+    },
+    {
+      "file": "app/public/assets/temple-warm-carpet.png",
+      "bytes": 2815585,
+      "sha256": "932da6a4d99447045fc4e643c68414c882ead2bac179f6e2ee80a89b0110ec0c"
+    },
+    {
+      "file": "app/public/assets/tiktok-gifts-atlas.png",
+      "bytes": 745279,
+      "sha256": "aec7fc0316efb4df7ae308fc7ab1e426fa4367c82594c9e32ab07b96610f1bd9"
+    },
+    {
+      "file": "app/public/assets/top-supporter-frame.svg",
+      "bytes": 1944,
+      "sha256": "22f74fbf82ae4ff5b48878c6bb521a1518f06b4bf31af02243f0e3d42bd5b648"
+    },
+    {
+      "file": "app/public/audio/meditation-user.mp3",
+      "bytes": 88239262,
+      "sha256": "1461ad5e98775dd3468eab04fd6094b20ad0b693e5ea399e506c829fd37e955a"
+    },
+    {
+      "file": "app/public/crowd-bows.mjs",
+      "bytes": 954,
+      "sha256": "9918e4fbeddd54425575a29ee1907d26165e51b3063d499c8dd474ffd876a843"
+    },
+    {
+      "file": "app/public/female-atlas.mjs",
+      "bytes": 1490,
+      "sha256": "7917f16096f0039589d2affc5aebbfd487b386455ee3952fc932010c972fd602"
+    },
+    {
+      "file": "app/public/fonts/noto-sans-vietnamese.ttf",
+      "bytes": 2049096,
+      "sha256": "bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d"
+    },
+    {
+      "file": "app/public/fonts/OFL.txt",
+      "bytes": 4396,
+      "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a"
+    },
+    {
+      "file": "app/public/gift-icons.mjs",
+      "bytes": 1064,
+      "sha256": "f0f1dd74e69520ada115cf6d3c267d00e1f5c4722106982ad605f500b4dbfe2c"
+    },
+    {
+      "file": "app/public/incense-smoke.js",
+      "bytes": 3625,
+      "sha256": "e11f37b73fafcb65bb08e9378f2b5e0fac08e1a3eadc5b0b080748e1aec6f855"
+    },
+    {
+      "file": "app/public/index.html",
+      "bytes": 40894,
+      "sha256": "5cbe6fe6421dd5c247ea4e98a8032d192d683d5aa3d3a7088975c84e8e52596e"
+    },
+    {
+      "file": "app/public/large-gift.mjs",
+      "bytes": 250,
+      "sha256": "7cd6e320029fcfbfacfa073d31a83dfd735d1a7022e4eab3f026f644b2c23e58"
+    },
+    {
+      "file": "app/public/layout-editor.js",
+      "bytes": 3862,
+      "sha256": "9c1b1c8d20066fd561f4f8f80d287cfadc671bc4522649b4b8d28ea7afbdb09e"
+    },
+    {
+      "file": "app/public/overlay.css",
+      "bytes": 39876,
+      "sha256": "bf2c7cdb08e8cc34af393aa1b2cac5321ee2bdfb20ceb083e13ff5bbb1bc708b"
+    },
+    {
+      "file": "app/public/overlay.html",
+      "bytes": 3540,
+      "sha256": "635c1cc4be3aeb3727a55c7d44dd404953e46425b6175f13ea88c87ff645aff6"
+    },
+    {
+      "file": "app/public/overlay.js",
+      "bytes": 26411,
+      "sha256": "f95d4d498a501919f571610b1ce06eb369aabd1e877e63a9ade81c0c7fec8e30"
+    },
+    {
+      "file": "app/public/panel.css",
+      "bytes": 18868,
+      "sha256": "c383d431ddefadd6506c47177aafa43c588c5cdef195a378d1988eb9f462ac21"
+    },
+    {
+      "file": "app/public/panel.js",
+      "bytes": 18787,
+      "sha256": "1e3cd33972d62d4483f1fef7a0c5be7f000598b42a660edc9d4f34590160e148"
+    },
+    {
+      "file": "app/public/procession.mjs",
+      "bytes": 3106,
+      "sha256": "e27d6cf04660d87e80a80c900fd1bbd60b82193a39a4bf1a860d0ae83db712d8"
+    },
+    {
+      "file": "app/public/realtime.js",
+      "bytes": 975,
+      "sha256": "f781e6a7e1746128588640faf71cab241ad3a110f1860c428a402f3c5dbb6b6f"
+    },
+    {
+      "file": "app/public/ritual-motion.js",
+      "bytes": 5036,
+      "sha256": "6b892822fc7410d2aec3730821e542eb367a559ad84399f0cc0db9f4854b0d69"
+    },
+    {
+      "file": "app/public/seating.mjs",
+      "bytes": 1540,
+      "sha256": "b81af138003f9e505cb63d1481ae01f9b05de62d552cd18393b3981ee23401f7"
+    },
+    {
+      "file": "app/public/thanks.mjs",
+      "bytes": 2405,
+      "sha256": "9240871dc5a76c574b24e7113882ea8a5b48063154d35c288c6586a0d5e8e5e8"
+    },
+    {
+      "file": "app/public/theme-light.css",
+      "bytes": 6619,
+      "sha256": "21a1c75beea348b665fcaca208a4fb922bc874ecdc179e0b623da57b44fcb16b"
+    },
+    {
+      "file": "app/public/typography.css",
+      "bytes": 275,
+      "sha256": "10f62cebb96402b1ff38108315d9fd6a657a9a6eb08b4dff9e068f3f07f41506"
+    },
+    {
+      "file": "app/public/voice.js",
+      "bytes": 2221,
+      "sha256": "6d9d166317df7d9985e8e6f104a8c5868994b07d7a806d754e4cd6811a583a38"
+    },
+    {
+      "file": "app/server.cjs",
+      "bytes": 113104,
+      "sha256": "760c7fcf406c24c344d6b65d3ee7b7002fa6d9579020c90f18863cfb15bc49d7"
+    },
+    {
+      "file": "BAT_DAU.bat",
+      "bytes": 257,
+      "sha256": "6e33db3510e23c32386a23692b0d7075c02b4999f4d0bfb3fb78db233a591ef2"
+    },
+    {
+      "file": "BUILD_INFO.json",
+      "bytes": 252,
+      "sha256": "811d1a4e0ed7b2e3da7aeebd662e1a66ab80f05dd29a2769ca1069037a016e7c"
+    },
+    {
+      "file": "CAI_TIKFINITY.url",
+      "bytes": 55,
+      "sha256": "20b8850a43091bfd75e8e3053af2b0bcea40bf90b0bcafe287664068473cd5e0"
+    },
+    {
+      "file": "DOC_TRUOC.txt",
+      "bytes": 1642,
+      "sha256": "ec181f302b7a78b68f692ef279c80432e260382828b29c26c55ea64d7dd5370b"
+    },
+    {
+      "file": "HUONG_DAN.html",
+      "bytes": 24663,
+      "sha256": "8ba62e8891a53ebcce03de280b8b535fcf157a0d0ef954df6cadbf90d7eeecca"
+    },
+    {
+      "file": "HUONG_DAN_CHI_TIET.txt",
+      "bytes": 20297,
+      "sha256": "c03e593d43e48f307df5ee17bf61d23c2625acd93cd8dcae3cb8323261353785"
+    },
+    {
+      "file": "launcher.cjs",
+      "bytes": 1931,
+      "sha256": "9ce5b7f14c0b35037221973890033731d53d65cbbaa4795b52dffcfa598f7fff"
+    },
+    {
+      "file": "runtime/NODE-LICENSE.txt",
+      "bytes": 156926,
+      "sha256": "4573185d56580da2b890ba34a85a409257640f1c5632eade4300137266194d18"
+    },
+    {
+      "file": "runtime/node.exe",
+      "bytes": 91694408,
+      "sha256": "3331e1ffe19874215472217c5e94f5a0c6d8e18c4ac7111d3937aa0ad5e9b4a5"
+    },
+    {
+      "file": "THIRD_PARTY_LICENSES.txt",
+      "bytes": 6967,
+      "sha256": "2b33e5df4e3273acd6713b061cbe8748b1df0fb73985e2907842f79b7aa2e97c"
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+PHẬTMT · TƯƠNG TÁC TIKTOK LIVE
+
+Hướng dẫn sử dụng chi tiết
+
+Từ lần mở đầu tiên đến vận hành mỗi buổi LIVE. Chủ tool & hỗ trợ: Đức Quân · Zalo: 0329 024 876 (Nhận làm mọi tools).
+
+Chuẩn bị: máy Windows 10/11 64-bit, Internet, TikFinity Desktop và OBS hoặc TikTok LIVE Studio. Gói PhatMT đã có bộ chạy Node.js; khách không cần cài Node.js riêng.
+
+1. Giải nén, mở tool và kích hoạt
+
+• Giải nén toàn bộ thư mục PhatMT vào một vị trí dễ tìm. Không chạy trực tiếp trong cửa sổ WinRAR. Giữ nguyên cấu trúc thư mục app, runtime và các file đi kèm.
+
+• Bấm đúp BAT_DAU.bat. Cửa sổ chạy tool xuất hiện, trình duyệt tự mở http://localhost:3002/. Với bản phát triển cũ có thể dùng start.bat; bản khách dùng BAT_DAU.
+
+• Tool đã được gỡ key kích hoạt, mở lên là vào thẳng giao diện sử dụng ngay không cần nhập key.
+
+• Những lần sau trên cùng tài khoản Windows, tool nhớ kích hoạt. Chuyển sang máy hoặc tài khoản Windows khác có thể cần nhập lại.
+
+• Giữ cửa sổ chạy tool mở suốt phiên. Đóng cửa sổ này sẽ dừng dịch vụ localhost. Đóng tab trình duyệt điều khiển không phải là thao tác ngắt TikFinity.
+
+Kích hoạt chạy offline. Internet vẫn cần cho TikTok, TikFinity và giọng đọc trực tuyến. Gói gửi khách chỉ là thư mục PhatMT; thư mục quản lý key của chủ tool không dành cho khách.
+
+2. Cài TikFinity và kết nối đúng phòng LIVE
+
+• Tải TikFinity Desktop từ trang chính thức TikFinity ↗, hoặc mở CAI_TIKFINITY.url trong gói. Đây là phần mềm cài riêng.
+
+• Mở TikFinity trên cùng máy đang chạy PhatMT. Làm bước thiết lập/đăng nhập mà TikFinity yêu cầu.
+
+• Chọn đúng TikTok @username của phòng bạn muốn nhận tương tác, kết nối trong TikFinity. Phòng phải đang LIVE để kiểm tra dữ liệu thật.
+
+• Mở PhatMT → Tổng quan → Kết nối TikFinity. Không cần nhập mật khẩu TikTok vào PhatMT.
+
+• Nhờ một người gửi bình luận trong LIVE và kiểm tra Nhật ký tương tác. Sau đó thử quà nếu cần.
+
+Hiểu các trạng thái kết nối
+
+• Đang kết nối: đang mở kết nối với TikFinity.
+
+• Chờ dữ liệu LIVE: đã nối được TikFinity nhưng chưa xác nhận được tương tác thật. Trạng thái này chưa chứng minh đang nhận quà.
+
+• Đã kết nối thành công: đã nhận sự kiện LIVE. Nếu nguồn gửi ID chủ LIVE sẽ hiện @ID; nếu chỉ có ID phòng sẽ hiện ID phòng. Nếu nguồn không gửi các thông tin này, tool sẽ nói rõ chưa có ID.
+
+• Đang thử lại / Cần kiểm tra: kiểm tra mạng, TikFinity còn mở và đúng phòng; ngắt rồi kết nối lại nếu cần.
+
+Tên hoặc @ID của người bình luận không được dùng làm ID chủ LIVE. Tool nhận sự kiện, không đọc quà từ hình ảnh video.
+
+3. Đưa màn hình lên TikTok LIVE Studio hoặc OBS
+
+• Mở TikTok LIVE Studio và chọn bố cục LIVE dọc. Thêm nguồn Liên kết / Trình duyệt (tên có thể khác theo phiên bản). Trong OBS, dùng Browser Source.
+
+• Dán liên kết màn hình LIVE bên dưới. Đây là màn hình chánh điện; không dùng trang bảng điều khiển làm nguồn phát.
+
+• Bật độ phân giải tùy chỉnh của chính nguồn trình duyệt, nhập rộng 1080 px, cao 1920 px, tỷ lệ 9:16.
+
+• Đặt nguồn vừa khung dọc, kiểm tra các mép và không kéo méo tỷ lệ. Nếu có tùy chọn cắt/crop đã đặt từ trước, đưa về mặc định trước khi căn lại.
+
+• Bật âm thanh của nguồn/trình duyệt, kiểm tra bộ trộn âm thanh trong phần mềm LIVE.
+
+• Nếu chia sẻ cửa sổ thay cho nguồn trình duyệt, bấm Mở màn hình LIVE, chọn đúng cửa sổ và bật thu âm thanh phù hợp.
+RỘNG1080 pxCAO1920 pxhttp://localhost:3002/overlay.html
+Pixel là đơn vị cần nhập, không phải cm. Nếu hình nhỏ/mờ, sửa độ phân giải nguồn trước; kéo to một nguồn render nhỏ sẽ không tăng độ nét. Màn hình xem trước trong bảng điều khiển luôn im lặng.
+
+4. Thử trước khi phát và dùng thật
+
+• Trong Tổng quan, mở Thử hiệu ứng trước khi phát.
+
+• Thử tên toàn bộ người ngồi: gán tên mẫu cho tất cả chỗ ngồi theo số lượng bạn đang chọn. Đây là dữ liệu thử, không phải danh sách người xem thật.
+
+• Người vào phòng / Một bình luận / Nhiều bình luận: kiểm tra tên, ảnh đại diện và hộp bình luận.
+
+• Dâng hoa hồng / Quà lớn: kiểm tra dâng hương, bái, bảng tên công đức, lời cảm ơn và hiệu ứng.
+
+• Đi lại & hành lễ: xem nhân vật đi lên, hành lễ rồi trở về.
+
+• Thử xong, dùng Xóa dữ liệu phiên nếu muốn bắt đầu sạch trước khi kết nối LIVE thật.
+
+Sự kiện thử đi vào phiên hiện tại; quà thử có thể cộng điểm bảng vàng. Không bấm thử quà trong phiên thật nếu không muốn điểm mô phỏng xuất hiện. Nút nghe thử file âm thanh riêng không cộng quà.
+
+5. Số người ngồi, tên và bình luận
+
+• Vào phần Nội dung màn hình LIVE, chỉnh số người ngồi dưới từ 1–200. Mặc định 160; chỗ ngồi người tặng quà phía trên được giữ riêng.
+
+• Chỗ chưa có người thật vẫn có nhân vật nền, chưa có tên. Khi nguồn gửi sự kiện vào phòng hoặc bình luận, tên và ảnh người đó được gán vào chỗ ngồi.
+
+• Khi hết chỗ, người mới thay chỗ theo vòng lặp. Ví dụ đặt 160 chỗ thì dùng vòng 160, không cố định theo số 240 trước đây.
+
+• Tên và bình luận hiển thị trên đầu nhân vật. Tên dài chạy trong khung, không kéo giãn khung tên.
+
+• Thời gian hiển thị bình luận: mặc định 8 giây, chỉnh 1–30 giây. Cài đặt mới áp dụng cho các bình luận tiếp theo.
+
+• Bình luận được đưa vào lượt dâng hương; lúc vắng bình luận, nhân vật nền tự luân phiên lên. Sau dâng hương, nhân vật thường xuống đệm bái rồi về chỗ.
+
+• Chỉ hiển thị người rời phòng đi ra khi nguồn gửi sự kiện rời có định danh. Không tự coi người im lặng là đã thoát LIVE.
+
+TikTok/TikFinity có thể không cung cấp đủ mọi sự kiện vào/rời phòng. Giới hạn hàng chờ và các vị trí hành lễ giúp nhân vật không dồn quá đông ở lư hương.
+
+Hiệu ứng hoa đào khi dâng hương
+
+Trong Nội dung màn hình, dùng công tắc Hoa đào rơi khi dâng hương. Mặc định bật. Hoa hồng phấn bắt đầu rơi khi nhân vật cắm hương, áp dụng cả lượt hành lễ thường và người tặng quà. Tắt công tắc sẽ dọn hoa đang rơi ngay; bật lại áp dụng cho các lượt cắm hương tiếp theo. Cài đặt được tự lưu.
+
+5.1. Kéo thả bố cục và phóng to/thu nhỏ
+
+• Trong khung xem trước bên phải bảng điều khiển, bấm Chỉnh vị trí & kích thước.
+
+• Các phần chỉnh được có đường viền xanh: bảng vàng, dãy quà bên trái, thanh công đức dưới và tiêu đề. Kéo giữa bảng để di chuyển.
+
+• Kéo góc ↘ của phần muốn chỉnh để phóng to hoặc thu nhỏ theo tỷ lệ. Nên giữ các bảng ngoài vùng mặt tượng Phật và lối hành lễ.
+
+• Thả chuột để tự lưu. Đợi dòng Đã lưu vị trí và kích thước. Màn hình LIVE tự cập nhật; tải lại trang vẫn giữ bố cục.
+
+• Bấm Xong chỉnh sửa để thoát. Khung chỉnh chỉ hiện trong preview, không hiện trên nguồn LIVE. Trong Nội dung màn hình, có công tắc ẩn/hiện riêng cho tiêu đề, dãy quà trái, bảng vàng, thanh công đức dưới và cụm avatar Top 1–2–3; tắt không làm mất vị trí đã lưu.
+
+• Bấm Về mặc định và xác nhận nếu muốn khôi phục toàn bộ vị trí, kích thước ban đầu.
+
+5.2. Chọn 4 icon quà bên trái
+
+Vào Quà & lời cầu → Chọn icon quà & lời cầu. Có đúng 4 ô hiển thị. Mỗi ô chọn một trong bảy icon: Hoa hồng, Đỉnh, Yêu bạn, Bắn tim, Chú heo may mắn, Bánh vòng, TikTok. Sửa lời cầu ở ô bên cạnh và đợi tự lưu. Icon có nền trong suốt. Quà khớp một trong 4 icon chọn sẽ dùng lời cầu tương ứng; tất cả quà khác đều dùng Cầu Bình An. Mặc định: Hoa hồng → Cầu Bình An; Bắn tim → Cầu Tình Duyên; Chú heo may mắn → Cầu Sức Khỏe; Bánh vòng → Cầu Gia Đình Bình An. Dùng Chỉnh vị trí & kích thước để di chuyển hoặc phóng to/thu nhỏ cả dãy.
+
+6. Người tặng quà và bảng vàng công đức
+
+• Người tặng quà được xếp lượt dâng hương, hành lễ và nhận lời cảm ơn có tên. Bốn đệm phía trên dành cho người tặng quà gần nhất.
+
+• Bảng tên người từng tặng quà có viền vàng champagne, họa tiết sen và dấu ✦. Áo chuyển sang tông tím khi bắt đầu bái và giữ màu khi về ngồi trong phiên.
+
+• Bảng vàng xếp theo tổng số lượng quà × giá kim cương mà nguồn sự kiện gửi đến. “Tâm đức” là tên điểm trong game, không phải số tiền có thể rút.
+
+• Top 5 ở bảng chính là tổng đóng góp của phiên; nhóm người tặng gần nhất và thứ hạng tổng điểm là hai thông tin khác nhau.
+
+• Tắt LIVE, đóng tool hoặc tải lại trang không tự xóa điểm. Chỉ dùng Xóa dữ liệu phiên khi thực sự muốn bắt đầu lại.
+
+Tri ân quà lớn bằng sen vàng
+
+Quà lớn là lượt/combo có tổng từ 50 xu trở lên theo giá quà và số lượng nguồn gửi. Đến lượt hành lễ, avatar người tặng nằm trong sen vàng xoay giữa màn hình khoảng 6 giây. Avatar giữ thẳng để dễ nhận diện. Lời cảm ơn trang trọng có tên được đọc bằng giọng nói; cần bật Đọc cảm ơn người tặng quà và âm thanh nguồn LIVE. Tool chuẩn bị giọng trước khi hiện sen; nếu mạng lỗi có thể chuyển sang giọng Việt trên máy khi có. Hiệu ứng tự ẩn và không chồng nhiều người cùng lúc.
+
+Quà dồn dập, thứ tự ưu tiên và cụm avatar Top
+
+Chỉ khi có ít nhất 6 người tặng hoa hồng khác nhau dồn đến (gồm người đang đến lượt và những người chưa được đọc trong hàng chờ), tool mới gom đọc tối đa 3 tên một lượt. Ít hơn 6 thì đọc riêng. Lời cảm ơn dùng “đã dâng hương”. Những người đã được đọc chung vẫn có lượt lên hành lễ, nhưng không đọc lặp riêng cho cùng lượt quà đó. Quà từ 50 xu trở lên được tri ân riêng bằng sen vàng. Hàng chờ ưu tiên theo tổng giá trị xu của lượt/combo; quà lớn hơn được lên trước sau khi người đang hành lễ hoàn tất, không cắt ngang lượt đang bái.
+
+Cụm avatar Top 1–2–3 xếp theo tổng đóng góp của phiên, khung vàng cho Top 1, bạc xanh cho Top 2, đồng cho Top 3. Bật/tắt tại Nội dung màn hình. Khi Chỉnh vị trí & kích thước đang bật, kéo cụm hoặc góc ↘ để đổi vị trí/kích thước. Chưa có người tặng thì cụm này chưa hiện.
+
+7. Thay nhạc nền và âm thanh tặng quà
+
+• Vào Nội dung & âm thanh, tìm Nhạc nền của bạn hoặc Âm thanh khi tặng quà của bạn.
+
+• Bấm chọn file từ máy. Hỗ trợ MP3, WAV, OGG. Nhạc nền tối đa 100 MB/file; âm thanh quà tối đa 15 MB/file.
+
+• Sau khi chọn, bấm Lưu nhạc nền hoặc Lưu âm thanh quà. Chỉ chọn file chưa tải lên. Đợi thông báo Đã lưu thành công và kiểm tra dòng Đang dùng có tên bài mới; màn hình LIVE tự nhận thay đổi.
+
+• Bấm Nghe thử để kiểm tra. Nghe thử file dừng sau tối đa 12 giây; đây chỉ là giới hạn nghe thử, không phải giới hạn bài nhạc nền.
+
+• Bật Phát nhạc nền và chỉnh âm lượng nhạc. Nhạc nền không giới hạn số giây, tự phát lặp khi hết bài, tự hạ nhỏ khi đọc cảm ơn.
+
+• Âm thanh quà dùng chung cho các lượt tặng quà; chỉnh bằng thanh Chuông & lời cảm ơn. Nên chọn tiếng ngắn, nhẹ để không lấn lời đọc. Tool có giãn cách giữa các tiếng quà khi quà đến liên tục.
+
+• Bấm Dùng âm thanh mặc định ở đúng mục để trở về nhạc nền gốc hoặc chuông chùa mặc định.
+
+File được sao chép vào dữ liệu của tool trên máy, không bắt buộc giữ file gốc đúng vị trí ban đầu. Các file khách tải lên không nằm trong thư mục chương trình nên chép bản cập nhật không làm mất nhạc đã chọn. Tránh mở nhiều cửa sổ LIVE có tiếng cùng lúc.
+
+8. Giọng đọc, mẫu cảm ơn và lời cầu theo quà
+
+• Bật Đọc cảm ơn người tặng quà, chọn giọng Hoài My hoặc Nam Minh, bấm Nghe thử để kiểm tra Internet và âm lượng.
+
+• Tool hiện chưa có thanh chỉnh tốc độ giọng đọc. Giọng trực tuyến cần Internet; nội dung lời cảm ơn được gửi đến dịch vụ giọng đọc Microsoft.
+
+• Sửa Mẫu lời cảm ơn bằng các biến: {name} tên người tặng; {wish} câu chúc; {gift} tên quà; {count} số lượng; {prayer} lời cầu.
+
+• Ví dụ: Cảm ơn bạn {name} đã dâng hương. {wish} Giữ nguyên dấu ngoặc của biến muốn sử dụng.
+
+• Kho câu chúc: mỗi dòng một câu. Tool chọn ngẫu nhiên và tránh lặp câu vừa đọc. Có thể thêm lời chúc bình an, sức khỏe, gia đình.
+
+• Ở mục Quà & lời cầu, chọn icon và sửa lời cầu cho 4 ô. Quà ngoài bốn lựa chọn luôn là Cầu Bình An.
+
+• Các thay đổi được tự lưu; đợi trạng thái đã lưu trước khi đóng trang.
+
+9. Quy trình cho mỗi buổi LIVE
+
+• Mở BAT_DAU.bat, TikFinity Desktop và TikTok LIVE Studio/OBS.
+
+• Kiểm tra cấu hình, số người ngồi và âm lượng. Nếu muốn một phiên thống kê mới, xóa dữ liệu phiên cũ trước khi nhận quà thật.
+
+• Kết nối phòng đang LIVE trong TikFinity, rồi bấm Kết nối TikFinity ở PhatMT.
+
+• Kiểm tra bình luận thật, trạng thái kết nối và nguồn hình 1080 × 1920. Xác nhận âm thanh vào được phần mềm LIVE.
+
+• Trong lúc phát, giữ tool và TikFinity chạy. Tránh bấm các nút dữ liệu thử.
+
+• Kết thúc: dừng phát trong phần mềm LIVE, ngắt kết nối PhatMT khi cần và đóng cửa sổ chạy tool. Không cần xóa phiên nếu muốn giữ điểm cho lần sau.
+
+10. Cập nhật bản mới và giữ dữ liệu khách
+
+• Dừng tool bằng cách đóng tất cả cửa sổ BAT_DAU của bản cũ đang chạy, không chỉ đóng tab trình duyệt. Nếu máy chủ còn là bản cũ, bản mới sẽ cảnh báo thay vì mở lại nhầm bản. Giữ lại thư mục cũ hoặc tạo bản sao nếu muốn dự phòng.
+
+• Giải nén bản PhatMT mới và chép đè toàn bộ nội dung gói vào thư mục cũ, giữ nguyên cấu trúc. Không chỉ chép một file HTML hoặc CSS.
+
+• Mở lại BAT_DAU.bat. Trong trình duyệt bấm Ctrl + F5; trong LIVE Studio/OBS tải lại nguồn trình duyệt.
+
+• Trên cùng tài khoản Windows, kích hoạt, cấu hình, file nhạc khách chọn và dữ liệu phiên được giữ riêng tại %LOCALAPPDATA%\PhatMT. Không xóa thư mục dữ liệu này nếu muốn giữ các thông tin đó.
+
+Nếu muốn sao lưu dữ liệu, đóng tool trước rồi sao chép thư mục dữ liệu ra nơi an toàn. Kích hoạt được mã hóa theo tài khoản Windows; sao chép dữ liệu sang máy khác không thay thế bước kích hoạt trên máy mới. Không cần cài lại TikFinity khi chỉ cập nhật PhatMT.
+
+11. Xử lý lỗi thường gặp
+
+Bấm BAT_DAU nhưng trang không mở?
+
+Kiểm tra đã giải nén đủ app và runtime. Mở thủ công http://localhost:3002/ và xem thông báo trong cửa sổ chạy tool. Nếu báo cổng 3002 đang được dùng, đóng bản tool cũ rồi mở lại; không chạy hai bản cùng cổng.
+
+TikFinity đã mở nhưng không nhận bình luận/quà?
+
+Kiểm tra TikFinity Desktop chạy cùng máy và kết nối đúng @username đang LIVE. Xem TikFinity có nhận sự kiện thật không. Tại PhatMT, ngắt rồi kết nối lại; thử một bình luận và xem Nhật ký tương tác. Chỉ mở được cổng TikFinity chưa đủ để xác nhận nhận quà.
+
+Không có nhạc, tiếng quà hoặc lời cảm ơn?
+
+Kiểm tra công tắc nhạc/giọng đọc, hai thanh âm lượng, âm lượng Windows và âm thanh nguồn trong phần mềm LIVE. Nhấp vào màn hình LIVE một lần nếu trình duyệt chặn tự phát. Giọng đọc cần Internet. File tự tải có thể sai định dạng dù đã đổi đuôi; thử file khác hoặc khôi phục mặc định.
+
+Nhạc hoặc lời đọc bị lặp/chồng nhau?
+
+Chỉ để một nguồn/cửa sổ LIVE phát tiếng. Đóng cửa sổ nghe thử hoặc các tab overlay dư. Kiểm tra không thu đồng thời âm thanh nguồn trình duyệt và âm thanh máy tính thành hai đường trùng nhau.
+
+Hình nhỏ, mờ hoặc bị mất góc?
+
+Đặt chính nguồn trình duyệt 1080 × 1920, căn vừa khung dọc và kiểm tra crop. Không dùng trang điều khiển làm hình phát. Tải lại nguồn sau khi cập nhật. Kiểm tra vùng an toàn vì giao diện TikTok có thể phủ tên/khu bình luận lên hình.
+
+Chưa thấy tên, bảng VIP hoặc áo mới?
+
+Chỗ nền chưa có người thật sẽ không có tên. Dùng Thử tên toàn bộ người ngồi để xem mẫu. Bảng tên đặc biệt cần sự kiện quà, áo đổi khi đến lượt bắt đầu bái. Mở lại tool rồi Ctrl + F5 và tải lại nguồn LIVE nếu vừa cập nhật. Xóa phiên sẽ xóa đóng góp và trạng thái người tặng quà của phiên.
+
+Chọn file nhạc không thành công?
+
+Dùng MP3/WAV/OGG đúng nội dung, không chỉ đổi tên đuôi. Kiểm tra giới hạn 100 MB cho nền, 15 MB cho quà. Chờ tải xong rồi mới đóng trang; xem dòng thông báo ngay dưới mục tải file. Tên bài dài không ảnh hưởng thời lượng phát.
+
+Bảng vàng bao giờ reset?
+
+Không tự reset khi tắt LIVE hoặc đóng tool. Dùng Xóa dữ liệu phiên và xác nhận khi muốn bắt đầu lại. Thao tác này xóa tên/chỗ ngồi gán, điểm, quà đã thấy và danh sách người tặng gần nhất; cấu hình, nhạc riêng và kích hoạt vẫn giữ.
+
+12. Liên hệ hỗ trợ
+
+Đức Quân · Zalo: 0329 024 876 (Nhận làm mọi tools)
+
+Khi báo lỗi, gửi ảnh thông báo trong tool, trạng thái TikFinity và Nhật ký tương tác. Với lỗi hình, gửi thêm kích thước nguồn LIVE. Với lỗi nhạc, cho biết định dạng và dung lượng file. Không gửi key hoặc file kích hoạt trong ảnh hỗ trợ.

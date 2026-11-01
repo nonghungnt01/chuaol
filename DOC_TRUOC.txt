@@ -1,0 +1,22 @@
+PHẬTMT PRO STUDIO · TƯƠNG TÁC TIKTOK LIVE
+Chủ tool & hỗ trợ: Đức Quân · Zalo: 0329024876 (Nhận làm mọi tools)
+
+1. Giải nén toàn bộ thư mục vào máy Windows 10/11 64-bit.
+2. Bấm BAT_DAU.bat. Gói đã có Node.js, không cần cài Node.js riêng.
+3. Tool đã được gỡ bỏ key bản quyền, mở lên là vào thẳng giao diện sử dụng ngay không cần nhập key.
+4. Cài TikFinity Desktop từ https://tikfinity.zerody.one/ (có lối tắt kèm theo).
+   Kết nối đúng phòng LIVE trong TikFinity trước, sau đó bấm Kết nối ở PhatMT.
+   TikFinity Desktop là phần mềm riêng, không nằm trong gói này.
+5. Mở màn hình LIVE hoặc thêm nguồn trình duyệt trong OBS/TikTok LIVE Studio:
+   http://localhost:3002/overlay.html — đặt kích thước nguồn 1080 × 1920.
+6. Giữ cửa sổ BAT_DAU chạy trong suốt phiên. Đọc HUONG_DAN.html để xem chi tiết.
+
+Tính năng mới nổi bật trên giao diện Pro:
+- 4 bộ giao diện độc quyền: Hoàng Kim (Obsidian), Ngọc Bích (Emerald), Sen Hồng (Lotus), Hổ Phách (Imperial) chuyển đổi ngay góc trên.
+- Nút Gõ Mõ tích công đức trực tuyến với âm thanh mõ gỗ chân thực và hiệu ứng chữ nổi "+1 Công đức".
+- Bàn phím nhanh gửi câu niệm Phật & Cầu an lên LIVE chỉ với 1 click.
+- Bàn phím mô phỏng dâng quà tùy chỉnh nâng cao (chọn quà, số lượng xu/quà, tên người dâng).
+- Tab Bảng Vàng & Phật tử: Xem danh sách thí chủ công đức cao nhất, tìm kiếm người xem đang ngồi và nút sao chép danh sách vinh danh.
+- Bộ Preset nạp sẵn câu chúc theo 4 chủ đề (Bình an, Tài lộc, Thi cử, Tri ân).
+
+Liên hệ Đức Quân (Zalo: 0329024876) khi cần hỗ trợ hoặc nhận làm / mod mọi loại tools theo yêu cầu.
