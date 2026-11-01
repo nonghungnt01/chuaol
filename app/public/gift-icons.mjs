@@ -1,0 +1,5 @@
+export const giftIcons=[{id:'rose',name:'Hoa hồng'},{id:'cat',name:'Đỉnh'},{id:'love',name:'Yêu bạn'},{id:'finger-heart',name:'Bắn tim'},{id:'pig',name:'Chú heo may mắn'},{id:'donut',name:'Bánh vòng'},{id:'tiktok',name:'TikTok'}];
+export const defaultGiftSlots=[{icon:'rose',prayer:'Cầu Bình An'},{icon:'finger-heart',prayer:'Cầu Tình Duyên'},{icon:'pig',prayer:'Cầu Sức Khỏe'},{icon:'donut',prayer:'Cầu Gia Đình Bình An'}];
+export function giftIcon(id){const index=Math.max(0,giftIcons.findIndex(x=>x.id===id)),el=document.createElement('span');el.className='tiktok-gift-icon';el.style.setProperty('--gift-column',String(index));el.setAttribute('role','img');el.setAttribute('aria-label',giftIcons[index].name);return el;}
+
+export const giftAliases={rose:['Rose','Hoa hồng'],cat:['Đỉnh','Awesome'],love:['Yêu bạn','Love You'], 'finger-heart':['Bắn tim','Finger Heart','FingerHeart'],pig:['Chú heo may mắn','Lucky Pig','Lucky Piggy','Pig'],donut:['Bánh vòng','Doughnut','Donut','Doughnuts'],tiktok:['TikTok']};

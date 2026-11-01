@@ -1,0 +1,291 @@
+@import url('/typography.css');
+*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#090604}#frame{position:absolute;width:1080px;height:1920px;transform-origin:top left;overflow:hidden;background:#301a0b;color:#f4dda3;font-family:'An Nhien Sans',sans-serif}#scene{position:absolute;inset:0}.temple{width:100%;height:100%;position:absolute;object-fit:cover}.vignette{position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 95px 8px #1c0c0555,inset 0 -115px 90px -30px #100805bd}
+header{position:absolute;top:31px;left:150px;right:150px;text-align:center;text-shadow:0 2px 9px #170b03,0 2px 19px #000;pointer-events:none}header .ornament{font-size:13px;letter-spacing:5px;color:#f5dd9e}header .header-line{display:inline-block;width:50px;border-top:1px solid #c9a052;vertical-align:middle;margin:0 12px}h1{font:normal 46px 'An Nhien Sans',serif;letter-spacing:5px;margin:9px 0 9px;color:#ffe5a3}header p{font-size:19px;color:#ffedcc;margin:0}.couplet{position:absolute;top:360px;width:64px;min-height:280px;max-height:450px;overflow:hidden;background:linear-gradient(90deg,#44170ee6,#812f22ed 50%,#4b1c10ed);border:2px solid #b58c45;box-shadow:0 8px 20px #0005,inset 0 0 0 5px #5b2319;text-align:center;display:flex;flex-direction:column;justify-content:center;gap:5px;padding:18px 4px;font:23px/1.4 'An Nhien Sans';pointer-events:none}#couplet-left{left:24px}#couplet-right{right:24px}
+.devotee{position:absolute;width:128px;height:164px;transform-origin:50% 100%;filter:drop-shadow(0 8px 5px #22130588);transition:opacity .4s;will-change:transform}.devotee-sprite{width:100%;height:100%;background-image:url('/assets/female-bow.png');background-repeat:no-repeat;background-size:200% 100%;background-position:0 0}.devotee .body{position:absolute;inset:0;transform-origin:50% 95%;animation:seated-bow 11s ease-in-out infinite}.devotee .label{position:absolute;top:-4px;left:50%;transform:translateX(-50%);display:flex;gap:5px;align-items:center;max-width:160px;white-space:nowrap;background:#21160ee6;color:#f8ead0;border:1px solid #ae8b51;border-radius:6px;font-size:15px;padding:4px 8px 4px 4px;box-shadow:0 3px 8px #0005}.label img,.label .initial,.rank img,.rank .initial,.ceremony-label img,.ceremony-label .initial{width:24px;height:24px;flex-shrink:0;border-radius:50%;background:#7e6b46;text-align:center;line-height:24px;font-size:14px;object-fit:cover;display:inline-block;color:#fff0cb}.label .person-name{overflow:hidden;text-overflow:ellipsis}.devotee.away{opacity:0;pointer-events:none}.devotee.chatting .label{border-color:#ffe3a1;background:#744c1e}.chat-bubble{position:absolute;bottom:164px;left:50%;transform:translateX(-50%);width:max-content;max-width:210px;padding:9px 13px;background:#2c1b11ed;border:1px solid #bc9858;border-radius:8px;color:#f9e9c5;font-size:20px;text-align:center;animation:bubble-in .35s ease-out;box-shadow:0 4px 16px #0005;word-break:break-word;white-space:normal}.chat-bubble:after{content:'';position:absolute;bottom:-7px;left:50%;border-width:6px 6px 0;border-style:solid;border-color:#bc9858 transparent transparent}
+.ceremony-person{position:absolute;width:150px;height:195px;transform-origin:50% 100%;z-index:30;will-change:left,top,transform;pointer-events:none;filter:drop-shadow(0 8px 4px #25160877)}.ceremony-person[hidden]{display:none}.ceremony-sprite{position:absolute;inset:0;transition:filter .3s}.ceremony-person.walking .ceremony-sprite{animation:walk .28s ease-in-out infinite alternate}.ceremony-person.bowing .ceremony-sprite{animation:prostration 2.4s steps(1,end) infinite}.ceremony-label{position:absolute;top:-30px;left:50%;transform:translateX(-50%);display:flex;gap:8px;align-items:center;max-width:340px;white-space:nowrap;background:linear-gradient(#3f2a17f5,#21150df5);border:2px solid #e4bc6d;border-radius:8px;padding:6px 13px 6px 6px;box-shadow:0 4px 16px #0007;color:#ffe7b5;font-size:20px}.ceremony-label #ceremony-name{overflow:hidden;text-overflow:ellipsis}#ceremony-avatar{display:flex}.person-shadow{position:absolute;bottom:0;left:-25%;width:150%;height:25%;background:radial-gradient(ellipse,#edbd5f88,transparent 70%);opacity:.8}#offering{position:absolute;left:50%;top:0;transform:translate(-50%,-95%);font-size:32px;opacity:0;transition:opacity .5s}.ceremony-person.bowing #offering{opacity:1}
+#focus-card{position:absolute;top:738px;left:205px;right:205px;opacity:0;transform:translateY(10px);transition:opacity .4s,transform .4s;text-align:center;pointer-events:none;padding:17px 16px 20px;border-radius:10px;border:1px solid #d7b264aa;background:linear-gradient(90deg,#271508c9,#3d2712eb,#271508c9);box-shadow:0 8px 30px #190a0655;z-index:35}#focus-card.show{opacity:1;transform:none}.card-ornament{font-size:13px;letter-spacing:4px;color:#d4b577;margin-bottom:7px}#focus-card strong{display:block;font:37px 'An Nhien Sans';color:#ffe7af;text-shadow:0 2px 8px #000}#focus-card #dedication{display:block;margin-top:10px;font-size:21px;color:#efdfb7}#welcome{position:absolute;top:965px;left:0;right:0;text-align:center;font-size:16px;letter-spacing:5px;text-shadow:0 2px 8px #000;transition:opacity .4s;color:#ffde9d}#welcome span{margin:0 15px}#frame.in-ceremony #welcome{opacity:0}
+#aura{position:absolute;top:65px;left:120px;width:840px;height:810px;background:radial-gradient(ellipse,#ffd272aa,transparent 65%);opacity:0;transition:opacity .5s;mix-blend-mode:screen;pointer-events:none}#aura.big{opacity:1;animation:pulse 2s infinite}.incense{position:absolute;left:49%;top:29%;width:34px;height:300px;opacity:.19;filter:blur(13px);border-radius:50%;background:linear-gradient(0deg,transparent,#fff8db,transparent);animation:incense 7s ease-in-out infinite;pointer-events:none}.incense-two{animation-delay:-3.5s;left:50.5%;height:260px}.petal{position:absolute;top:-70px;width:14px;height:25px;border-radius:90% 0 90% 0;background:#dfabaf;animation:fall linear forwards;opacity:.8;pointer-events:none}
+footer{position:absolute;bottom:24px;left:24px;right:24px;display:flex;align-items:stretch;gap:13px;min-height:160px;z-index:40}footer section{border:1px solid #af8b4e;border-radius:9px;background:linear-gradient(130deg,#27180eea,#190f09ed);box-shadow:0 6px 20px #0005}.offering-panel{flex:1;min-width:0;padding:10px 13px}#ceremony-status{display:flex;gap:12px;align-items:center;color:#f5dfaf;font-size:19px;min-height:34px;border-bottom:1px solid #a07c3e77;padding-bottom:8px;white-space:nowrap;overflow:hidden}#ceremony-status-text{overflow:hidden;text-overflow:ellipsis}.lotus{font-size:27px;color:#dfb965}#gift-guide{display:flex;gap:9px;padding:10px 0 7px}.gift-tile{flex:1;min-width:0;text-align:center;padding:6px 3px;border:1px solid #866537aa;border-radius:5px;background:#53381a33}.gift-tile b{display:block;font-size:18px;font-weight:500;color:#f7dfb0}.gift-tile small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px;color:#cbb28c}.queue-line{font-size:11px;letter-spacing:.8px;color:#cfb489;display:flex;justify-content:space-between;gap:10px}#board{width:300px;flex-shrink:0;padding:11px 13px}#board h2{text-align:center;letter-spacing:2px;font:18px 'An Nhien Sans';margin:0 0 8px;border-bottom:1px solid #a07c3e77;padding-bottom:9px}.rank{display:flex;gap:8px;align-items:center;font-size:16px;margin:6px 0}.rank .name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rank .value{color:#edc276;font-size:17px}.rank .rank-number{font-size:14px;color:#bf9b60;width:17px}.empty{font-size:15px;text-align:center;opacity:.7;padding-top:12px}#board[hidden]{display:none}
+#audio-gate{position:absolute;bottom:214px;left:0;right:0;display:flex;flex-direction:column;align-items:center;gap:9px;z-index:50}#audio-gate button{background:#d9bd7b;color:#32200e;border:1px solid #f0d997;border-radius:30px;font:22px 'An Nhien Sans';padding:13px 28px;cursor:pointer;box-shadow:0 4px 16px #0007}#audio-gate small{font-size:14px;color:#f2d8a4;text-shadow:0 2px 5px #000}#offline{position:absolute;bottom:4px;right:25px;font-size:13px;color:#e3b978;z-index:55}
+@keyframes walk{from{transform:translateY(0) rotate(-2deg)}to{transform:translateY(-5px) rotate(2deg)}}@keyframes prostration{0%,18%,89%,100%{background-position:0 0}24%,78%{background-position:100% 0}}@keyframes seated-bow{0%,55%,100%{transform:perspective(400px) rotateX(0) scaleY(1)}69%,82%{transform:perspective(400px) rotateX(15deg) scaleY(.84)}}@keyframes bubble-in{from{opacity:0;translate:0 10px}to{opacity:1;translate:0 0}}@keyframes fall{to{transform:translate3d(140px,2050px,0) rotate(650deg);opacity:.1}}@keyframes pulse{50%{filter:brightness(1.6)}}@keyframes incense{0%,100%{transform:translateX(-8px) skewX(-9deg) scaleX(.65);opacity:.1}50%{transform:translateX(18px) skewX(9deg) scaleX(1.2);opacity:.23}}
+
+#scene{transform-origin:540px 1040px;transition:transform .65s cubic-bezier(.2,.65,.3,1)}
+#scene.camera-close{transform:translateY(100px) scale(1.65)}
+#scene.camera-close .devotee:not(.away),#scene.camera-close .roamer{opacity:.3}
+.roamer{z-index:15}.roamer .ceremony-label{font-size:16px;max-width:200px;top:-22px}
+.roamer .ceremony-label img,.roamer .ceremony-label .initial{width:20px;height:20px;line-height:20px}
+.ceremony-person .chat-bubble{bottom:225px;max-width:220px;font-size:19px;z-index:60}
+#focus-card{top:730px;left:150px;right:150px}#focus-card strong{font-size:34px}#focus-card #dedication{font-size:22px;line-height:1.5}
+
+.premium-pad{position:absolute;width:120px;height:34px;border-radius:50%;background:radial-gradient(ellipse at 50% 22%,#c14c39 0,#9b2926 48%,#5a1717 75%);border:2px solid #dbb264;box-shadow:0 5px 4px #32130688,inset 0 0 0 4px #801c22,inset 0 0 0 6px #b98746;pointer-events:none}
+.premium-pad:after{content:'✧';position:absolute;left:0;right:0;text-align:center;color:#dcb875;font-size:22px;line-height:27px}
+.devotee.premium .label{border-color:#edc777;background:#4f2919f0;color:#ffe9b7}
+.devotee:not(.premium) .label{max-width:115px;font-size:12px;padding:2px 5px 2px 2px;border-color:#a58b6066}
+.devotee:not(.premium) .label img,.devotee:not(.premium) .label .initial{width:18px;height:18px;line-height:18px;font-size:11px}
+.devotee.chatting{z-index:25!important}.devotee.away{z-index:0!important}
+
+#focus-card{display:none!important}
+.label[hidden],.ceremony-label[hidden]{display:none!important}
+.devotee:not(.premium).away{opacity:1!important;z-index:auto!important}
+.devotee:not(.premium).away .label{visibility:hidden}
+.devotee:not(.premium).chatting .label{visibility:visible}
+.devotee .chat-bubble{max-width:150px;padding:4px 7px;font-size:15px;line-height:1.2;border-radius:4px;box-shadow:0 2px 6px #0005}
+.roamer .ceremony-label{font-size:13px}
+
+/* The invitation stays below all worshippers; the Buddha and altar remain unobstructed. */
+.peace-panel{padding:17px 20px 12px!important;background:linear-gradient(125deg,#29190ee8,#1b1009db)!important;position:relative;overflow:hidden}
+.peace-invitation{display:flex;align-items:center;gap:18px;padding:1px 0 13px}
+.peace-lotus{width:65px;height:59px;flex-shrink:0;fill:none;stroke:#ddbb77;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;opacity:.9}
+.peace-eyebrow{font-size:10px;letter-spacing:3px;color:#bd9e6c;margin-bottom:5px}
+.peace-invitation h2{margin:0;color:#f6dfad;font:31px/1.2 'An Nhien Sans',serif;letter-spacing:.4px;text-shadow:0 2px 8px #0005}
+.peace-invitation p{margin:7px 0 0;color:#ceb995;font-size:16px;line-height:1.4}
+.peace-bottom{border-top:1px solid #b08b4b55;padding-top:10px;display:flex;align-items:center;justify-content:space-between;gap:12px;color:#d7bd8d;font-size:13px;line-height:1.5}
+.peace-bottom #queue-count{font-size:10px;letter-spacing:1px;color:#bba378;white-space:nowrap}
+#ceremony-status.peace-status{border:0;padding:3px 0 0;min-height:19px;gap:6px;font-size:11px;color:#b19a77}
+.peace-status .lotus{font-size:13px}
+
+/* Compact, character-anchored gift plaque inspired by the reference. */
+#offering.offering-badge{top:-116px;left:50%;transform:translateX(-50%);width:max-content;min-width:240px;max-width:380px;padding:10px 17px 11px;border-radius:12px;background:linear-gradient(145deg,#fff0a9,#e6b84f);border:2px solid #fff0af;color:#593b13;text-align:center;box-shadow:0 4px 16px #57310966,0 0 15px #f4c46055;font-size:initial;white-space:normal}
+.offering-badge strong{display:block;font:bold 23px/1.2 'An Nhien Sans',serif;color:#5b3e16}
+.offering-badge span{display:block;margin-top:5px;font:14px/1.35 'An Nhien Sans',sans-serif;color:#654a20;overflow-wrap:anywhere}
+.devotee:not(.premium) .label{max-width:135px;font-size:13px}
+
+/* Keep chat text equally readable at every depth of the seating area. */
+.devotee .chat-bubble{max-width:330px;padding:10px 15px;font-size:32px;font-weight:500;line-height:1.3;border-radius:9px;border:2px solid #dbb77b;background:#24180bf7;color:#fff1d0;box-shadow:0 4px 16px #0009;transform-origin:50% 100%;transform:translateX(calc(-50% + var(--bubble-shift,0px))) scale(var(--bubble-scale,1));text-shadow:0 1px 2px #0008}
+.devotee:not(.premium).chatting .label{border-color:#e7c17d;color:#fff0ce}
+
+/* Small fixed corner panels leave the Buddha and the entire lower floor open. */
+.live-corners{position:absolute;inset:0;z-index:45;pointer-events:none}
+.live-corners section{position:absolute;border:1px solid #cda65a;border-radius:12px;background:linear-gradient(145deg,#382513f2,#21150def);box-shadow:0 7px 24px #150b0655,inset 0 1px 0 #ffe2a62b}
+.live-corners .peace-panel{top:205px;left:24px;width:285px;padding:17px 18px 13px!important;background:linear-gradient(145deg,#392710f0,#25180eeb)!important;overflow:visible}
+.live-corners .peace-invitation{display:block;padding:0 0 12px}
+.live-corners .peace-lotus{width:38px;height:34px;float:left;margin:0 9px 8px 0;stroke:#f2ce81}
+.live-corners .peace-eyebrow{font-size:12px;letter-spacing:.8px;color:#d8b87d;margin:0 0 7px}
+.live-corners .peace-invitation h2{font-family:var(--font-vi);font-size:29px;font-weight:650;line-height:1.35;letter-spacing:0;color:#ffe6ae;text-shadow:0 1px 5px #0005;clear:both}
+.live-corners .peace-invitation p{font-size:17px;line-height:1.5;color:#e2cda8;margin-top:7px}
+.live-corners .peace-bottom{display:block;border-color:#d2ac6655;padding-top:10px;font-size:17px;line-height:1.5;color:#ffe3ae}
+.live-corners #queue-count{display:block;font-size:11px;letter-spacing:.3px;margin-top:8px;color:#c8aa75;white-space:normal}
+.live-corners #ceremony-status.peace-status{font-size:11px;min-height:19px;margin-top:5px;color:#c5ad86}
+.live-corners #board{top:205px;right:24px;width:275px;padding:16px 14px}
+.live-corners #board h2{font-family:var(--font-vi);font-size:19px;font-weight:600;line-height:1.4;letter-spacing:0;color:#ffe4aa;padding-bottom:10px;margin-bottom:10px}
+.live-corners .rank{font-size:21px;line-height:1.4;margin:9px 0;gap:7px}
+.live-corners .rank .value{font-size:18px}.live-corners .rank .rank-number{font-size:16px}
+.live-corners .empty{font-size:17px;line-height:1.5;margin:0;padding:7px 0;color:#dcc69d}
+#frame{font-family:var(--font-vi);font-synthesis:none}
+header h1{font-family:var(--font-vi);font-size:45px;font-weight:650;line-height:1.4;letter-spacing:1px}
+header p{font-size:21px;line-height:1.5;letter-spacing:0}
+header .ornament{letter-spacing:2px}
+.offering-badge strong{font-family:var(--font-vi);font-size:25px;font-weight:700;line-height:1.35;letter-spacing:0}
+.offering-badge span{font-family:var(--font-vi);font-size:16px;line-height:1.5;letter-spacing:0}
+#offering.offering-badge{top:-126px;padding:9px 15px 11px}
+.devotee .label,.devotee:not(.premium) .label{top:calc(-4px + var(--name-lift,0px));transform-origin:50% 100%;transform:translateX(-50%) scale(var(--bubble-scale,1));font-family:var(--font-vi);font-size:22px;font-weight:500;line-height:1.25;max-width:110px;padding:2px 4px;gap:4px;background:#24170df5;border-color:#c7a66c;color:#fff0cc}
+.devotee .label .person-name{min-width:0}
+.devotee.premium .label{max-width:136px;font-size:22px;--name-lift:0px}
+.devotee .label img,.devotee .label .initial,.devotee:not(.premium) .label img,.devotee:not(.premium) .label .initial{width:20px;height:20px;line-height:20px;font-size:13px}
+.devotee.chatting .label{max-width:180px;border-color:#ffe0a0;background:#513519}
+.ceremony-label{font-family:var(--font-vi);font-size:24px;line-height:1.4;font-weight:600}
+.roamer .ceremony-label{font-family:var(--font-vi);font-size:18px;line-height:1.35}
+.devotee .chat-bubble{font-family:var(--font-vi);line-height:1.4;letter-spacing:0}
+#audio-gate{bottom:52px}
+
+.live-corners .peace-invitation h2{font-size:31px;line-height:1.3}.live-corners #peace-hint{white-space:pre-line;overflow-wrap:anywhere}
+
+.live-corners .peace-panel{padding:17px 18px!important}
+.live-corners .peace-panel>h2{margin:0;font-family:var(--font-vi);font-size:30px;font-weight:650;line-height:1.35;letter-spacing:0;color:#ffe6ae;text-wrap:balance;text-align:center}
+
+/* Slightly larger, higher-contrast donor board for the LIVE source. */
+.live-corners #board{width:305px;padding:18px 16px;background:linear-gradient(145deg,#35220df9,#1d1209f7);border-color:#dbb778}
+.live-corners #board h2{font-size:22px;font-weight:700;color:#fff0c8;text-shadow:none}
+.live-corners .rank{font-size:24px;font-weight:600;margin:11px 0;color:#fff0cc}
+.live-corners .rank .value{font-size:21px;font-weight:650;color:#ffda8c}
+.live-corners .rank .rank-number{font-size:18px;color:#ead09a}
+.live-corners .rank img,.live-corners .rank .initial{width:27px;height:27px;line-height:27px;font-size:16px}
+
+/* Gold, silver and bronze merit leaderboard; five recent session leaders. */
+.live-corners #board{width:350px;padding:17px 14px 13px;border:2px solid #caa555;border-radius:16px;background:linear-gradient(145deg,#3b260df5,#170f08f7);box-shadow:0 6px 20px #10080080,inset 0 0 0 3px #c49b4120}
+.merit-heading{display:flex;align-items:center;gap:9px;padding:0 1px 12px;border-bottom:1px solid #caa15c77;margin-bottom:11px}
+.merit-lotus{font-size:29px;line-height:1;color:#e9c774}
+.live-corners #board .merit-heading h2{font-size:20px;font-weight:750;line-height:1.35;letter-spacing:.1px;color:#ffe7a2;padding:0;margin:0;border:0}
+.merit-heading p{font-size:15px;line-height:1.4;color:#d3c09d;margin:4px 0 0}
+.live-corners #board .rank{min-height:59px;margin:8px 0 0;padding:8px 9px;gap:8px;border:1px solid #977c40;border-radius:12px;background:#100c08d6;font-size:20px;font-weight:650;line-height:1.3;color:#fff0d3}
+.live-corners #board .rank-1{border:2px solid #ebc764;background:linear-gradient(100deg,#79501ee8,#4c3114d9);box-shadow:0 0 9px #ecc36b20}
+.live-corners #board .rank-2{border-color:#b8c0c8;background:linear-gradient(100deg,#46505ad9,#252b31dc)}
+.live-corners #board .rank-3{border-color:#bf8050;background:linear-gradient(100deg,#683c22e8,#351f13dc)}
+.live-corners #board .rank img,.live-corners #board .rank .initial{width:34px;height:34px;line-height:30px;font-size:18px;border:2px solid #c8ab6a}
+.live-corners #board .rank-2 img,.live-corners #board .rank-2 .initial{border-color:#ccd3d8}
+.live-corners #board .rank-3 img,.live-corners #board .rank-3 .initial{border-color:#d5986a}
+.live-corners #board .rank .name{min-width:0}
+.live-corners #board .rank .value{display:flex;align-items:center;gap:4px;flex-shrink:0;font-size:18px;color:#ffe182;white-space:nowrap}
+.merit-star{font-size:17px;color:#ffdb56}.rank .value b{font-weight:750}.rank .value small{font-size:12px;font-weight:500;color:#e9d49c}
+
+.merit-heading .merit-lotus{width:40px;height:38px;flex:0 0 40px;filter:drop-shadow(0 1px 3px #f2cc7440)}
+
+.roamer.bowing .ceremony-sprite{animation:prostration 2.4s steps(1,end) 1 both}
+
+/* A small 3% breathing room for LIVE edges; fill the margin with the same backdrop. */
+#frame:before{content:'';position:absolute;inset:-8px;background:url('/assets/temple-warm-carpet.png?v=3.1.2') center/cover no-repeat;filter:blur(5px);transform:scale(1.02);pointer-events:none}
+#scene{transform:scale(.97)}
+#scene.camera-close{transform:translateY(100px) scale(1.60)}
+header{top:43px}
+.live-corners #board{right:42px;top:215px}
+
+/* Natural congregation and articulated ritual actors. Names never resize their box. */
+.devotee.away,.devotee:not(.premium).away{opacity:1!important}
+.devotee.away .body,.devotee.away .label{visibility:hidden!important}
+.devotee .label,.devotee:not(.premium) .label,.devotee.premium .label,.devotee.chatting .label{width:140px;max-width:140px;font-size:24px;gap:5px;height:36px}
+.devotee .label img,.devotee .label .initial,.devotee:not(.premium) .label img,.devotee:not(.premium) .label .initial{width:28px;height:28px;line-height:28px;font-size:16px}
+.person-name{flex:1;overflow:hidden;white-space:nowrap;text-overflow:clip!important}
+.person-name>span{display:inline-block}
+.scroll-name>span{animation:name-scroll 9s ease-in-out infinite alternate}
+@keyframes name-scroll{0%,20%{transform:translateX(0)}80%,100%{transform:translateX(var(--overflow))}}
+.ordinary-pad{width:72px;height:27px;background:radial-gradient(ellipse,#b38e5d,#6e492c);border-color:#bd9b67;box-shadow:0 3px 5px #24180d77,inset 0 0 0 3px #755233}
+.ordinary-pad:after{content:''}
+.ceremony-sprite:has(.jointed-figure){background:none!important;animation:none!important}
+.jointed-figure{width:150px;height:195px;overflow:visible}
+.roamer .ceremony-label{font-size:24px;max-width:180px;overflow:hidden}
+.roamer .ceremony-label img,.roamer .ceremony-label .initial{width:28px;height:28px;line-height:28px}
+.planted-incense{position:absolute;width:3px;height:44px;background:linear-gradient(#ffba69 0 7%,#713121 7% 100%);z-index:5;transform:rotate(-2deg);pointer-events:none}
+.planted-incense:before{content:'';position:absolute;bottom:100%;left:-7px;width:16px;height:75px;border-radius:50%;background:linear-gradient(transparent,#fff4d677);filter:blur(5px);animation:incense 5s infinite}
+.stick-smoke{animation:smoke-drift 3s ease-in-out infinite alternate}
+@keyframes smoke-drift{to{transform:translateX(5px);opacity:.3}}
+.devotee:not(.premium) .label{top:145px}
+#welcome{display:none}
+.ceremony-label,.roamer .ceremony-label{width:190px;max-width:190px}
+.ceremony-label img,.ceremony-label .initial{width:30px;height:30px;line-height:30px}
+.pose-layer{position:absolute;inset:0;background-repeat:no-repeat;transform-origin:50% 100%;opacity:0}
+
+/* The original red cushions move downstairs; the upper set is newly upholstered. */
+.premium-pad.luxury-pad{width:156px;height:56px;background:url('/assets/luxury-cushion.svg') center/contain no-repeat;border:0;box-shadow:none;border-radius:0}
+.premium-pad.luxury-pad:after{content:none}
+.premium-pad.ordinary-pad{width:120px;height:34px;background:radial-gradient(ellipse at 50% 22%,#c14c39 0,#9b2926 48%,#5a1717 75%);border:2px solid #dbb264;box-shadow:0 5px 4px #32130688,inset 0 0 0 4px #801c22,inset 0 0 0 6px #b98746}
+.premium-pad.ordinary-pad:after{content:'✧'}
+.devotee.premium{z-index:28!important}
+.devotee.premium .body{animation-duration:4.2s}
+.live-corners #board{width:310px;right:24px;top:205px}
+.ceremony-person .ceremony-label{transition:top .3s ease}
+.ceremony-person[data-holding="true"] .ceremony-label{top:-70px}
+.anime-anchor{background:none!important;animation:none!important}
+.anime-figure{position:absolute;inset:0;background-repeat:no-repeat;transform-origin:50% 100%;opacity:1;transition:none!important}
+#incense-smoke{position:absolute;left:0;top:0;width:1080px;height:1060px;pointer-events:none;z-index:18}
+.incense{display:none!important}
+.planted-incense:before{content:none}
+.premium-pad.ordinary-pad{width:132px;height:48px;background:url('/assets/lotus-cushion.svg') center/contain no-repeat;border:0;box-shadow:none;border-radius:0}
+.premium-pad.ordinary-pad:after{content:none}
+.devotee-sprite{background-image:url('/assets/female-bow.png');background-size:400% 100%}
+.devotee.premium .label{top:-40px}
+.anime-figure{right:auto;bottom:auto}
+.ceremony-person[data-pose-kind="walk"] .ceremony-label,.ceremony-person[data-pose-kind="standing"] .ceremony-label{top:var(--standing-label-top,-75px)}
+.ceremony-person[data-holding="true"] .ceremony-label{top:var(--holding-label-top,-115px)}
+#live-footer{position:absolute;left:22px;right:22px;bottom:16px;height:172px;min-height:0;display:flex;gap:12px;z-index:46;font-family:var(--font-vi)}
+#live-footer section{border:1.5px solid #b28a4f;border-radius:10px;background:linear-gradient(135deg,#302013f5,#160e08f5);box-shadow:0 5px 18px #10090570;overflow:hidden}
+.footer-offerings{flex:1;min-width:0;padding:10px 12px}
+.footer-current{height:31px;display:flex;justify-content:center;align-items:center;gap:12px;border-bottom:1px solid #bb985a66;font-size:21px;font-weight:600;color:#f4d99f}
+#footer-current{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#footer-gifts{display:flex;gap:9px;padding-top:12px}
+.footer-gift{flex:1;min-width:0;min-height:94px;border:1px solid #b98b4d99;border-radius:6px;text-align:center;padding:12px 7px;background:#67411d20}
+.footer-gift b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:21px;font-weight:650;color:#ffe2a1}
+.footer-gift span{display:block;font-size:16px;line-height:1.4;margin-top:6px;color:#d6c09c;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#footer-merit{width:290px;padding:12px 14px;flex-shrink:0}
+#footer-merit[hidden]{display:none}
+#footer-merit h2{font-family:var(--font-vi);font-size:20px;margin:0 0 10px;color:#f4d99f;text-align:center;border-bottom:1px solid #bb985a66;padding-bottom:8px}
+#footer-ranking{font-size:17px;color:#d6c09c}
+.footer-rank{display:flex;gap:10px;align-items:center;justify-content:space-between;margin:5px 0;font-size:19px;line-height:1.35}
+.footer-rank span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}.footer-rank b{flex-shrink:0;font-size:18px;color:#e9c987}
+
+/* Names sit immediately above heads; comments stack above the nameplate. */
+.devotee .label,.devotee:not(.premium) .label,.devotee.premium .label{top:-42px;bottom:auto}
+.devotee .chat-bubble{bottom:calc(100% + 42px + 18px * var(--bubble-scale,1));top:auto;z-index:61}
+
+/* Gift supporters earn gold nameplates; clothing changes at their first salute. */
+.donor .label,.donor .ceremony-label{background:linear-gradient(120deg,#68451b,#302012)!important;border:2px solid #f0cd76;color:#fff2bd!important;box-shadow:0 0 9px #ebbb534d,inset 0 0 0 1px #f0cf7440;text-shadow:0 1px 2px #160d07}
+.donor .label .initial,.donor .ceremony-label .initial{background:#9f7a35;color:#fff6cf}
+.donor-outfit .anime-figure{filter:hue-rotate(42deg) saturate(1.45) brightness(1.08);transition:filter .8s ease!important}
+
+/* Champagne-gold supporter frames: fixed width, lotus crest, quiet plum enamel. */
+.devotee.donor .label,.devotee.donor:not(.premium) .label,.devotee.donor.premium .label,.devotee.donor.chatting .label{width:160px;max-width:160px;height:40px;padding:3px 17px 3px 4px;gap:6px;font-size:24px}
+.donor .label,.donor .ceremony-label{overflow:visible;border:2px solid transparent;border-radius:9px;background:linear-gradient(115deg,#352237,#201723 60%,#412839) padding-box,linear-gradient(135deg,#fff0b9,#b88c42 30%,#f4d994 55%,#9b6b30 77%,#ffe7aa) border-box!important;box-shadow:0 2px 7px #160e0bb0,inset 0 0 0 2px #dbc08744,0 0 7px #e6c47530;text-shadow:0 1px 2px #0f0a0d;color:#fff0c5!important}
+.donor .label:before,.donor .ceremony-label:before{content:'';position:absolute;left:50%;top:-10px;width:25px;height:15px;transform:translateX(-50%);border-radius:10px 10px 2px 2px;background:#302033 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 20' fill='none' stroke='%23efd594' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 17C8 12 12 5 16 2c4 3 8 10 0 15Zm0 0C7 17 3 12 3 7c7 0 10 5 13 10Zm0 0c9 0 13-5 13-10-7 0-10 5-13 10ZM5 18h22'/%3E%3C/svg%3E") center/22px 14px no-repeat;box-shadow:0 -1px 0 #d1ad65}
+.donor .label:after,.donor .ceremony-label:after{content:'✦';position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:13px;line-height:1;color:#ebca80;text-shadow:0 0 4px #d5a85266}
+.donor .label img,.donor .label .initial,.donor .ceremony-label img,.donor .ceremony-label .initial{border:1.5px solid #efd493;box-shadow:0 0 0 1px #795b35;background:#8e713f}
+.donor .person-name{min-width:0;overflow:hidden}
+.donor .ceremony-label{padding-right:20px}
+.donor-outfit .anime-figure{filter:hue-rotate(42deg) saturate(1.22) brightness(1.02)}
+
+/* Strong readable name borders at phone-sized LIVE resolution. */
+
+.devotee.donor .label,.devotee.donor:not(.premium) .label,.devotee.donor.premium .label,.devotee.donor.chatting .label,.ceremony-person.donor .ceremony-label{border:4px solid #f5d583;background:linear-gradient(115deg,#352237,#201723 60%,#412839) padding-box!important;box-shadow:0 0 0 1px #68451b,inset 0 0 0 1px #fff0b980,0 3px 9px #120807e6,0 0 8px #edc36370;color:#fff5ce!important}
+
+/* Seven-color pulsing borders exclusively for gift supporters. */
+.devotee.donor .label,.devotee.donor:not(.premium) .label,.devotee.donor.premium .label,.devotee.donor.chatting .label,.ceremony-person.donor .ceremony-label{animation:donor-rainbow-border 4.2s linear infinite}
+@keyframes donor-rainbow-border{
+0%,100%{border-color:#ff6585;box-shadow:0 0 0 1px #241222,inset 0 0 0 1px #ffffff55,0 0 5px #ff658588}
+14.28%{border-color:#ffa65b;box-shadow:0 0 0 1px #241222,inset 0 0 0 1px #ffffff55,0 0 10px #ffa65baa}
+28.57%{border-color:#ffe77b;box-shadow:0 0 0 1px #241222,inset 0 0 0 1px #ffffff55,0 0 5px #ffe77b88}
+42.85%{border-color:#81e3a0;box-shadow:0 0 0 1px #241222,inset 0 0 0 1px #ffffff55,0 0 10px #81e3a0aa}
+57.14%{border-color:#6edce9;box-shadow:0 0 0 1px #241222,inset 0 0 0 1px #ffffff55,0 0 5px #6edce988}
+71.42%{border-color:#8b9eff;box-shadow:0 0 0 1px #241222,inset 0 0 0 1px #ffffff55,0 0 10px #8b9effaa}
+85.71%{border-color:#d995f3;box-shadow:0 0 0 1px #241222,inset 0 0 0 1px #ffffff55,0 0 5px #d995f388}
+}
+
+/* Rich wine-red donor plates stay distinct against the golden temple. */
+.devotee.donor .label,.devotee.donor:not(.premium) .label,.devotee.donor.premium .label,.devotee.donor.chatting .label,.ceremony-person.donor .ceremony-label{background:linear-gradient(110deg,#921d4d,#661237 65%,#80183f) padding-box!important;color:#fffbee!important;font-weight:700;text-shadow:0 1px 2px #230414}
+.donor .label:before,.donor .ceremony-label:before{background-color:#76163e}
+
+/* The current three highest contributors earn gold robes and sparkling gold frames. */
+.top-donor.donor-outfit .anime-figure{filter:sepia(1) saturate(2.5) hue-rotate(355deg) brightness(1.12)}
+.devotee.donor.top-donor .label,.devotee.donor.top-donor:not(.premium) .label,.devotee.donor.top-donor.premium .label,.devotee.donor.top-donor.chatting .label,.ceremony-person.donor.top-donor .ceremony-label{border:4px solid #ffe69a;background:linear-gradient(115deg,#8c5b16,#54330b 65%,#855319) padding-box!important;color:#fff8d8!important;animation:top-donor-gold 2.8s ease-in-out infinite}
+.top-donor .label:before,.top-donor .ceremony-label:before{background-color:#70501b;box-shadow:0 -1px 0 #ffe6a4}
+.top-donor .label:after,.top-donor .ceremony-label:after{color:#fff2ad;font-size:14px;animation:top-donor-star 2.8s ease-in-out infinite}
+.top-donor[data-donor-rank="1"] .label:after,.top-donor[data-donor-rank="1"] .ceremony-label:after{content:'Ⅰ'}
+.top-donor[data-donor-rank="2"] .label:after,.top-donor[data-donor-rank="2"] .ceremony-label:after{content:'Ⅱ'}
+.top-donor[data-donor-rank="3"] .label:after,.top-donor[data-donor-rank="3"] .ceremony-label:after{content:'Ⅲ'}
+@keyframes top-donor-gold{0%,100%{border-color:#dba64c;box-shadow:0 0 0 1px #805315,inset 0 0 0 1px #fff0ac88,0 0 5px #f4c75b66}35%{border-color:#fff6c7;box-shadow:0 0 0 1px #bb8a37,inset 0 0 0 1px #fff9d8,0 0 14px #f8d674aa}65%{border-color:#f2c968;box-shadow:0 0 0 1px #805315,inset 0 0 0 1px #fff0ac88,0 0 7px #f4c75b88}}
+@keyframes top-donor-star{0%,100%{text-shadow:0 0 2px #ffc84c;opacity:.85}40%{text-shadow:0 0 7px #fff4b6,0 0 12px #ffc84c;opacity:1}}
+
+/* Compact left-hand offering icons, outside the central Buddha silhouette. */
+#gift-prayer-rail{position:absolute;left:24px;top:255px;width:238px;display:grid;gap:10px;z-index:44;pointer-events:none;font-family:var(--font-vi)}
+.gift-prayer-item{display:flex;align-items:center;gap:10px;min-height:70px;padding:8px 10px 8px 5px;border:1px solid #d8b47477;border-radius:12px;background:linear-gradient(110deg,#25150de8,#24170d99);box-shadow:0 3px 8px #0005}
+.gift-prayer-icon{flex:0 0 54px;width:54px;text-align:center;font-size:45px;line-height:1.1;filter:drop-shadow(0 2px 4px #0008)}
+.gift-prayer-item strong{font-size:23px;line-height:1.25;font-weight:650;color:#fff3d2;text-shadow:0 1px 3px #000;overflow-wrap:anywhere}
+
+/* Transparent offering rail, matching the floating reference layout. */
+.gift-prayer-item{background:none;border:0;box-shadow:none;border-radius:0;padding:4px 0;min-height:70px}
+.gift-prayer-icon{background:none;border:0;box-shadow:none;font-size:49px;filter:drop-shadow(0 2px 3px #0009)}
+.gift-prayer-item strong{color:#fff9e9;text-shadow:0 2px 3px #000,0 0 6px #000c}
+
+.layout-editing .layout-target{pointer-events:auto!important;cursor:move;outline:4px dashed #7ceacb!important;outline-offset:3px;touch-action:none;user-select:none;z-index:100!important}
+.layout-editing .layout-target:before{content:attr(data-layout-title);position:absolute;left:0;top:-38px;padding:3px 10px;font:24px/1.2 Arial,sans-serif;color:#10261f;background:#9df4d9;border-radius:5px;white-space:nowrap;pointer-events:none}
+.layout-editing .layout-resize{position:absolute;right:0;bottom:0;width:62px;height:62px;background:#9df4d9;color:#16392b;display:grid;place-items:center;font:48px/1 Arial,sans-serif;border:3px solid #17392d;border-radius:8px;cursor:nwse-resize;touch-action:none;z-index:200}
+
+.tiktok-gift-icon{display:inline-block;width:60px;height:60px;flex-shrink:0;background-image:url('/assets/tiktok-gifts-atlas.png');background-size:700% 201.111111%;background-position:calc(var(--gift-column) * 100% / 6) center;background-repeat:no-repeat}
+
+.gift-prayer-icon.tiktok-gift-icon{width:60px;height:60px;flex:0 0 60px;font-size:0;background-image:url('/assets/tiktok-gifts-atlas.png');background-size:700% 201.111111%;background-position:calc(var(--gift-column) * 100% / 6) center;background-repeat:no-repeat}
+
+#petals{position:absolute;inset:0;pointer-events:none;z-index:43;overflow:hidden}
+.peach-blossom{position:absolute;top:-65px;background:url('/assets/peach-blossom.svg') center/contain no-repeat;opacity:0;pointer-events:none;animation:peach-fall linear forwards;will-change:transform;filter:drop-shadow(0 2px 3px #67303c33)}
+@keyframes peach-fall{0%{opacity:0;transform:translate3d(0,0,0) rotate(0deg)}8%{opacity:.85}35%{transform:translate3d(calc(var(--drift) * -.25),650px,0) rotate(calc(var(--turn) * .3))}68%{opacity:.8;transform:translate3d(calc(var(--drift) * .7),1300px,0) rotate(calc(var(--turn) * .65))}100%{opacity:0;transform:translate3d(var(--drift),2020px,0) rotate(var(--turn))}}
+
+#large-gift-tribute{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:690px;z-index:85;text-align:center;pointer-events:none;font-family:var(--font-vi);padding:22px 20px 28px;border-radius:32px;background:radial-gradient(ellipse,#2a180fed 0,#251308da 55%,#25130800 75%);color:#fff1bd;animation:tribute-reveal .65s ease-out both}
+.tribute-glow{position:absolute;inset:-60px;z-index:-1;background:radial-gradient(ellipse,#edbe4840,transparent 68%);pointer-events:none}
+.tribute-kicker{font-size:23px;letter-spacing:3px;color:#f5d47b;margin:0 0 5px;text-shadow:0 2px 6px #000}
+.tribute-lotus{position:relative;width:430px;height:430px;margin:0 auto}.golden-lotus-ring{position:absolute;inset:0;background:url('/assets/golden-lotus.svg') center/contain no-repeat;animation:golden-lotus-turn 22s linear infinite;filter:drop-shadow(0 0 18px #e9b64c66)}
+#large-gift-avatar{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:172px;height:172px;border:5px solid #fff0ae;border-radius:50%;overflow:hidden;box-shadow:0 0 0 5px #c99539,0 0 23px #ffe39c99;background:#715329;display:grid;place-items:center}
+#large-gift-avatar img,#large-gift-avatar .initial{display:grid;place-items:center;width:100%;height:100%;font-size:82px;font-weight:650;object-fit:cover;border-radius:50%;color:#fff5c9;background:#715329}
+#large-gift-name{font-size:42px;line-height:1.3;font-weight:750;overflow-wrap:anywhere;color:#ffedb1;margin:0 0 8px;text-shadow:0 2px 8px #000}
+#large-gift-details{font-size:23px;color:#e2c286;margin:0 0 16px;overflow-wrap:anywhere}.tribute-message{font-size:27px;line-height:1.55;color:#fff6d5;margin:0;text-shadow:0 2px 5px #000}
+.golden-lotus-sparkles{position:absolute;inset:0;color:#fff3af;font-size:36px;text-shadow:0 0 13px #ffda67;animation:golden-sparkle 2.2s ease-in-out infinite}.golden-lotus-sparkles>span{position:absolute;left:5%;top:55%;font-size:30px}.golden-lotus-sparkles>b{position:absolute;right:4%;top:27%;font-size:24px;font-weight:400}
+@keyframes golden-lotus-turn{to{transform:rotate(360deg)}}@keyframes golden-sparkle{0%,100%{opacity:.45}50%{opacity:1}}@keyframes tribute-reveal{from{opacity:0;translate:0 20px}to{opacity:1;translate:0 0}}
+
+[hidden]{display:none!important}
+
+#top-supporters{position:absolute;left:230px;top:1380px;width:620px;height:320px;display:flex;align-items:flex-start;justify-content:center;gap:0;z-index:45;pointer-events:none;text-align:center;font-family:var(--font-vi);filter:drop-shadow(0 3px 5px #13090388)}
+.top-supporter{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;padding-top:40px}.top-supporter.supporter-rank-1{flex:1.16;padding-top:0}
+.supporter-frame{position:relative;width:185px;height:204px;background:url('/assets/top-supporter-frame.svg') center/contain no-repeat}.supporter-rank-1 .supporter-frame{width:222px;height:244px}
+.supporter-rank-2 .supporter-frame{filter:hue-rotate(155deg) saturate(.85) brightness(1.12)}.supporter-rank-3 .supporter-frame{filter:hue-rotate(340deg) saturate(1.15)}
+.supporter-avatar{position:absolute;left:50%;top:49.1%;width:59%;aspect-ratio:1;transform:translate(-50%,-50%);border:3px solid #ffe6a0;border-radius:50%;overflow:hidden;background:#6f5329;z-index:1}
+.supporter-rank-2 .supporter-avatar,.supporter-rank-3 .supporter-avatar{filter:none}.supporter-avatar img,.supporter-avatar .initial{display:grid;place-items:center;width:100%;height:100%;object-fit:cover;background:#73542d;color:#fff2be;font-size:55px;border-radius:50%}
+.supporter-position{position:absolute;top:15%;left:50%;transform:translateX(-50%);font-size:21px;line-height:1.1;color:#fff8cb;white-space:nowrap;z-index:2;text-shadow:0 2px 3px #4c260c;font-weight:850}.supporter-rank-1 .supporter-position{font-size:25px}
+.supporter-name{display:block;flex:none!important;width:175px;max-width:175px;margin-top:-5px;font-size:24px;line-height:1.3;font-weight:750;color:#fff5c7;text-shadow:0 2px 3px #130a02;overflow:hidden}.top-supporter>small{font-size:21px;font-weight:650;color:#8fe4ef;line-height:1.5;text-shadow:0 2px 3px #130a02}.supporter-rank-1>small{color:#ffe094}
+
+.supporter-frame{background:none}.supporter-frame:before{content:'';position:absolute;inset:0;background:url('/assets/top-supporter-frame.svg') center/contain no-repeat;pointer-events:none}
+.supporter-rank-2 .supporter-frame,.supporter-rank-3 .supporter-frame{filter:none}.supporter-rank-2 .supporter-frame:before{filter:hue-rotate(155deg) saturate(.85) brightness(1.12)}.supporter-rank-3 .supporter-frame:before{filter:hue-rotate(340deg) saturate(1.15)}

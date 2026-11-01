@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="vi" data-theme="obsidian" data-build-id="a5f8d5fd229af28848b0">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090d14">
+  <title>PhậtMT Pro Studio · Đức Quân (0329 024 876)</title>
+  <link rel="stylesheet" href="/panel.css">
+</head>
+<body>
+
+<!-- SIDEBAR ĐIỀU HƯỚNG CHÍNH -->
+<aside class="sidebar">
+  <a class="brand" href="#overview">
+    <span class="brand-mark">✺</span>
+    <span>PhậtMT <span class="badge-pro">PRO</span><small>ĐỨC QUÂN · 0329 024 876</small></span>
+  </a>
+
+  <div class="nav-caption">KHÔNG GIAN ĐIỀU KHIỂN</div>
+  <nav aria-label="Điều hướng chính">
+    <a href="#overview" data-view="overview" class="nav active"><span>◈</span> Tổng quan & LIVE</a>
+    <a href="#ranking" data-view="ranking" class="nav"><span>🏆</span> Bảng vàng & Phật tử</a>
+    <a href="#appearance" data-view="appearance" class="nav"><span>✧</span> Màn hình & Bố cục</a>
+    <a href="#audio" data-view="audio" class="nav"><span>♫</span> Âm thanh & Giọng AI</a>
+    <a href="#gifts" data-view="gifts" class="nav"><span>♧</span> Quà tặng & Lời cầu</a>
+    <a href="#simulator" data-view="simulator" class="nav"><span>⚡</span> Bàn phím & Mô phỏng</a>
+    <div class="nav-divider"></div>
+    <a href="#guide" data-view="guide" class="nav"><span>▤</span> Hướng dẫn chi tiết</a>
+    <a href="#support" data-view="support" class="nav"><span>♡</span> Liên hệ Đức Quân</a>
+  </nav>
+
+  <!-- CARD TÁC GIẢ ĐỨC QUÂN TRÊN SIDEBAR -->
+  <div class="owner-mini">
+    <span class="owner-avatar">ĐQ</span>
+    <div>
+      <small>LẬP TRÌNH & HỖ TRỢ</small>
+      <strong>Đức Quân</strong>
+      <a href="https://zalo.me/0329024876" target="_blank" rel="noopener">Zalo: 0329 024 876 ↗</a>
+      <span class="dev-tag">⚡ Nhận làm mọi tools</span>
+    </div>
+  </div>
+
+  <div class="sidebar-foot">
+    <span class="local-dot"></span> Đã mở khóa vĩnh viễn · Sẵn sàng LIVE
+  </div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main>
+  <!-- TOPBAR MỚI HIỆN ĐẠI -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <span>PHẬTMT PRO <span class="slash">/</span> <span id="breadcrumb">Tổng quan & LIVE</span></span>
+      <span id="live-clock" class="live-clock-badge">⏱ 00:00:00</span>
+    </div>
+
+    <div class="topbar-right">
+      <!-- NÚT GÕ MÕ TÍCH CÔNG ĐỨC (MỚI) -->
+      <button id="btn-mokugyo" class="mokugyo-btn" type="button" title="Gõ mõ tạo thanh âm thanh tịnh và tích công đức">
+        🪷 Gõ Mõ: <span id="mokugyo-count">0</span>
+      </button>
+
+      <!-- BỘ CHUYỂN GIAO DIỆN (THEME SWITCHER MỚI) -->
+      <div class="theme-selector" role="group" aria-label="Chọn giao diện">
+        <button class="theme-btn active" data-theme-target="obsidian" type="button" title="Hoàng Kim Huyền Bí">✦ Kim</button>
+        <button class="theme-btn" data-theme-target="emerald" type="button" title="Thiền Viện Trúc Lâm">🌿 Ngọc</button>
+        <button class="theme-btn" data-theme-target="lotus" type="button" title="Sen Hồng Cổ Tự">🌸 Sen</button>
+        <button class="theme-btn" data-theme-target="imperial" type="button" title="Hoàng Cung Uy Nghi">👑 Hoàng</button>
+      </div>
+
+      <span class="service-badge">⚡ Nhận làm mọi tools: 0329.024.876</span>
+      <span id="global-status" class="status-pill offline">Chưa kết nối</span>
+    </div>
+  </div>
+
+  <!-- TIÊU ĐỀ VIEW -->
+  <header class="page-header">
+    <div>
+      <div class="eyebrow">KHÔNG GIAN AN YÊN · TƯƠNG TÁC TIKTOK LIVE STUDIO</div>
+      <h1 id="page-title">Sẵn sàng cho một phiên LIVE.</h1>
+      <p id="page-description">Kết nối, tùy chỉnh và chăm chút từng tương tác của người xem.</p>
+    </div>
+    <div class="header-actions">
+      <button id="copy-link" class="button secondary" type="button">Sao chép link LIVE</button>
+      <a class="button gold" href="/overlay.html" target="_blank" rel="noopener">Mở màn hình LIVE <span>↗</span></a>
+    </div>
+  </header>
+
+  <div id="runtime-warning" class="soft-note" role="alert" hidden></div>
+
+  <!-- WORKSPACE -->
+  <div class="workspace">
+    <div class="pages">
+
+      <!-- ====================================================
+           1. TAB TỔNG QUAN & KẾT NỐI
+           ==================================================== -->
+      <section class="view" id="view-overview" aria-label="Tổng quan">
+        <div class="stats">
+          <div class="stat">
+            <span>Phật tử đang ngồi</span>
+            <strong id="stat-people">0 <small>/ 160</small></strong>
+            <p>Chỗ ngồi luân phiên trong chánh điện</p>
+          </div>
+          <div class="stat">
+            <span>Người dâng quà</span>
+            <strong id="stat-givers">0</strong>
+            <p>Những tấm lòng thành kính ghé thăm</p>
+          </div>
+          <div class="stat">
+            <span>Tổng tâm đức</span>
+            <strong id="stat-diamonds">0</strong>
+            <p>Điểm bảng vàng công đức tích lũy</p>
+          </div>
+        </div>
+
+        <!-- Bàn phím nhanh câu niệm Phật trực tiếp (MỚI) -->
+        <article class="card">
+          <div class="card-heading">
+            <div>
+              <span class="section-kicker">TƯƠNG TÁC TỨC THÌ</span>
+              <h2>Phím tắt gửi lời niệm Phật & Cầu an lên LIVE</h2>
+            </div>
+            <span class="quiet-badge">1 Click</span>
+          </div>
+          <p class="muted">Bấm câu niệm Phật để người ngồi trong chánh điện lập tức dâng hương, hiện bình luận và thắp hương cầu an:</p>
+          <div class="quick-prayers-grid">
+            <button class="quick-prayer-btn" data-send-prayer="Nam Mô A Di Đà Phật"><span>🙏</span> Nam Mô A Di Đà Phật</button>
+            <button class="quick-prayer-btn" data-send-prayer="Cầu cho gia đình bình an mạnh khỏe"><span>🌹</span> Cầu Gia Đình Bình An</button>
+            <button class="quick-prayer-btn" data-send-prayer="Cầu tài lộc hanh thông buôn may bán đắt"><span>💰</span> Cầu Tài Lộc Hanh Thông</button>
+            <button class="quick-prayer-btn" data-send-prayer="Cầu thi cử đỗ đạt công danh thăng tiến"><span>📚</span> Cầu Công Danh Thi Cử</button>
+            <button class="quick-prayer-btn" data-send-prayer="Cầu sức khỏe dồi dào vạn sự an khang"><span>✨</span> Cầu Sức Khỏe Dồi Dào</button>
+            <button class="quick-prayer-btn" data-send-prayer="Nam Mô Quán Thế Âm Bồ Tát cứu khổ cứu nạn"><span>🪷</span> Nam Mô Quán Thế Âm</button>
+          </div>
+        </article>
+
+        <!-- Thẻ kết nối TikFinity -->
+        <article class="card connection-card">
+          <div class="card-heading">
+            <div>
+              <span class="section-kicker">BƯỚC ĐẦU TIÊN</span>
+              <h2>Kết nối TikFinity Desktop</h2>
+            </div>
+            <span id="status" class="status-pill offline">Chưa kết nối</span>
+          </div>
+          <div class="provider">
+            <span class="provider-icon">↔</span>
+            <div>
+              <strong>TikFinity Desktop (Windows)</strong>
+              <p>Tự động nhận người vào phòng, bình luận và sự kiện quà tặng TikTok.</p>
+            </div>
+            <span class="provider-tag">CỤC BỘ TRÊN MÁY</span>
+          </div>
+          <p class="muted">Mở TikFinity và bấm kết nối phòng LIVE của bạn trước. Sau đó bấm nút Kết nối tại đây để đưa dữ liệu lên màn hình.</p>
+          <div class="connection-actions">
+            <button id="connect" class="button gold" type="button">Kết nối TikFinity <span>→</span></button>
+            <button id="disconnect" class="button secondary" type="button">Ngắt kết nối</button>
+          </div>
+          <div class="connection-notice">
+            <span class="notice-dot"></span>
+            <p id="connection-message" aria-live="polite">Sẵn sàng kết nối. Hãy mở TikFinity Desktop trên máy này.</p>
+          </div>
+          <a href="#guide" class="inline-link">Chưa cài TikFinity? Xem hướng dẫn cài đặt ↗</a>
+        </article>
+
+        <!-- Nhật ký tương tác thời gian thực -->
+        <article class="card">
+          <div class="card-heading">
+            <h2>Nhật ký tương tác thời gian thực</h2>
+            <span class="subtle">50 sự kiện gần nhất</span>
+          </div>
+          <div id="log" aria-live="polite">
+            <p class="empty-log">Những tương tác mới từ người xem sẽ tự động xuất hiện ở đây.</p>
+          </div>
+        </article>
+
+        <!-- Thanh Reset phiên -->
+        <div class="session-bar">
+          <div>
+            <strong>Bắt đầu phiên LIVE mới</strong>
+            <p>Xóa tên đã gán, điểm công đức và danh sách người ngồi đệm. Giữ nguyên mọi cài đặt cấu hình.</p>
+          </div>
+          <button id="reset" class="button danger" type="button">Xóa dữ liệu phiên</button>
+        </div>
+      </section>
+
+      <!-- ====================================================
+           2. TAB BẢNG VÀNG & PHẬT TỬ (MỚI)
+           ==================================================== -->
+      <section class="view" id="view-ranking" aria-label="Bảng vàng & Phật tử" hidden>
+        <article class="card">
+          <div class="card-heading">
+            <div>
+              <span class="section-kicker">VINH DANH CÔNG ĐỨC</span>
+              <h2>Top Đại Thí Chủ Dâng Quà Trong Phiên</h2>
+            </div>
+            <button id="btn-export-merit" class="button secondary" type="button">📋 Sao chép danh sách vinh danh</button>
+          </div>
+          <p class="muted">Danh sách những người dâng quà nhiều nhất trong phiên phát sóng để streamer đọc lời tri ân:</p>
+          
+          <table class="ranking-table" id="table-top-donors">
+            <thead>
+              <tr>
+                <th style="width:50px">HẠNG</th>
+                <th>TÊN NGƯỜI DÂNG</th>
+                <th>SỐ QUÀ DÂNG</th>
+                <th>TỔNG ĐIỂM CÔNG ĐỨC</th>
+              </tr>
+            </thead>
+            <tbody id="top-donors-body">
+              <tr><td colspan="4" class="empty-log" style="text-align:center">Chưa có ai dâng quà trong phiên này.</td></tr>
+            </tbody>
+          </table>
+        </article>
+
+        <article class="card">
+          <div class="card-heading">
+            <div>
+              <span class="section-kicker">DANH SÁCH HIỆN TẠI</span>
+              <h2>Phật Tử Đang Ngồi Trong Chánh Điện</h2>
+            </div>
+            <span class="quiet-badge" id="badge-active-count">0 người</span>
+          </div>
+          <div class="search-devotees-box">
+            <input id="search-devotees" type="search" placeholder="🔍 Tìm kiếm Phật tử theo tên..." autocomplete="off">
+          </div>
+          <div style="max-height: 380px; overflow-y: auto;">
+            <table class="ranking-table" id="table-devotees">
+              <thead>
+                <tr>
+                  <th style="width:60px">VỊ TRÍ</th>
+                  <th>TÊN PHẬT TỬ</th>
+                  <th>TRẠNG THÁI</th>
+                </tr>
+              </thead>
+              <tbody id="devotees-body">
+                <tr><td colspan="3" class="empty-log" style="text-align:center">Đang tải danh sách chỗ ngồi...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <!-- ====================================================
+           3. TAB NỘI DUNG MÀN HÌNH & BỐ CỤC
+           ==================================================== -->
+      <section class="view" id="view-appearance" aria-label="Nội dung màn hình" hidden>
+        <article class="card">
+          <div class="card-heading">
+            <div>
+              <span class="section-kicker">DẤU ẤN RIÊNG CỦA BẠN</span>
+              <h2>Nội dung màn hình LIVE</h2>
+            </div>
+            <span class="save-state">Tự lưu</span>
+          </div>
+
+          <label for="crowdSize">Số người ngồi dưới chánh điện</label>
+          <div class="number-input">
+            <input id="crowdSize" type="number" min="1" max="200" step="1" value="160">
+            <span>người · tối đa 200</span>
+          </div>
+          <p class="field-hint">Mặc định 160 người. Các chỗ ngồi dâng quà phía trên được ưu tiên riêng.</p>
+
+          <label for="commentSeconds">Thời gian hiển thị bong bóng bình luận</label>
+          <div class="number-input">
+            <input id="commentSeconds" type="number" min="1" max="30" step="1" value="8">
+            <span>giây · 1–30</span>
+          </div>
+          <p class="field-hint">Thời gian hiển thị bình luận và tên trên đầu nhân vật hành lễ.</p>
+
+          <label class="toggle-row">
+            <span>
+              <strong>Hoa đào rơi khi cắm hương</strong>
+              <small>Cánh hoa hồng phấn bay nhẹ khi nhân vật cắm hương lên lư đồng.</small>
+            </span>
+            <input id="peachBlossoms" type="checkbox" role="switch">
+          </label>
+
+          <label for="title">Tên chùa / Tiêu đề chính</label>
+          <input id="title" maxlength="150" placeholder="AN NHIÊN TỰ">
+
+          <label for="subtitle">Dòng chữ nhắc người xem</label>
+          <input id="subtitle" maxlength="150" placeholder="Gõ “adidaphat” để cùng lễ Phật">
+
+          <div class="two-col">
+            <div>
+              <label for="keyword">Từ khóa lễ Phật (Tự động cắm hương)</label>
+              <input id="keyword" placeholder="adidaphat">
+              <p class="field-hint">Hỗ trợ cả chữ hoa, chữ thường, có dấu và không dấu.</p>
+            </div>
+            <div>
+              <label for="focusSeconds">Thời gian hành lễ tối thiểu</label>
+              <div class="number-input">
+                <input id="focusSeconds" type="number" min="5" max="10" value="5">
+                <span>giây</span>
+              </div>
+              <p class="field-hint">Lượt lễ sẽ đợi giọng đọc cảm ơn xong trước khi hoàn tất.</p>
+            </div>
+          </div>
+
+          <h3 style="margin-top:28px">Ẩn / Hiện các thành phần trên LIVE</h3>
+          <label class="toggle-row">
+            <span><strong>Tiêu đề tên chùa</strong><small>Ẩn/hiện dòng chữ chùa và lời nhắc người xem ở đỉnh màn hình.</small></span>
+            <input id="showTitle" type="checkbox" role="switch">
+          </label>
+          <label class="toggle-row">
+            <span><strong>Dãy 4 icon quà bên trái</strong><small>Ẩn/hiện dãy 4 icon quà tặng và lời cầu.</small></span>
+            <input id="showGiftRail" type="checkbox" role="switch">
+          </label>
+          <label class="toggle-row">
+            <span><strong>Thanh công đức đáy màn hình</strong><small>Ẩn/hiện thanh quà và bảng công đức thu nhỏ ở dưới cùng.</small></span>
+            <input id="showFooter" type="checkbox" role="switch">
+          </label>
+          <label class="toggle-row">
+            <span><strong>Cụm Avatar Top 1–2–3</strong><small>Khung ảnh đại diện vàng, bạc, đồng cho 3 người dẫn đầu.</small></span>
+            <input id="showTopSupporters" type="checkbox" role="switch">
+          </label>
+          <label class="toggle-row">
+            <span><strong>Bảng vàng công đức góc phải</strong><small>Hiển thị bảng Top 5 người dâng quà nhiều nhất.</small></span>
+            <input id="board" type="checkbox" role="switch">
+          </label>
+
+          <div class="soft-note">
+            💡 <strong>Mẹo hay:</strong> Dùng nút <b>"Chỉnh vị trí & kích thước"</b> bên cột xem trước để dùng chuột kéo thả trực tiếp từng bảng theo ý thích!
+          </div>
+        </article>
+      </section>
+
+      <!-- ====================================================
+           4. TAB ÂM THANH & GIỌNG ĐỌC AI
+           ==================================================== -->
+      <section class="view" id="view-audio" aria-label="Âm thanh & Giọng đọc" hidden>
+        <article class="card">
+          <div class="card-heading">
+            <div>
+              <span class="section-kicker">THANH ÂM TỰ TẠI</span>
+              <h2>Nhạc nền thiền & Âm thanh dâng quà</h2>
+            </div>
+            <span class="quiet-badge">Hỗ trợ MP3, WAV, OGG</span>
+          </div>
+
+          <div class="track-card">
+            <span class="track-icon">♫</span>
+            <div>
+              <strong>Nhạc Thiền Phật Giáo Không Lời</strong>
+              <p>Cục bộ · Tự phát lặp · Tự động hạ âm lượng khi có giọng đọc cảm ơn</p>
+            </div>
+          </div>
+
+          <div class="audio-custom">
+            <label for="audio-background">Tải lên nhạc nền tùy chọn của bạn</label>
+            <p id="audio-background-name" class="field-hint">Nhạc Thiền · Phật giáo không lời</p>
+            <input id="audio-background" type="file" accept=".mp3,.wav,.ogg,audio/mpeg,audio/wav,audio/ogg">
+            <button id="audio-background-save" class="button gold audio-save-button" type="button" disabled>Lưu nhạc nền</button>
+            <div class="voice-row" style="margin-top:10px">
+              <button id="audio-background-test" class="button secondary" type="button">♫ Nghe thử</button>
+              <button id="audio-background-reset" class="button secondary" type="button">Trở về mặc định</button>
+            </div>
+            <p id="audio-background-status" class="field-hint" role="status"></p>
+          </div>
+
+          <div class="audio-custom" style="margin-top:20px">
+            <label for="audio-gift">Tải lên âm thanh khi có người tặng quà</label>
+            <p id="audio-gift-name" class="field-hint">Chuông chùa mặc định</p>
+            <input id="audio-gift" type="file" accept=".mp3,.wav,.ogg,audio/mpeg,audio/wav,audio/ogg">
+            <button id="audio-gift-save" class="button gold audio-save-button" type="button" disabled>Lưu âm thanh quà</button>
+            <div class="voice-row" style="margin-top:10px">
+              <button id="audio-gift-test" class="button secondary" type="button">♫ Nghe thử</button>
+              <button id="audio-gift-reset" class="button secondary" type="button">Trở về chuông mặc định</button>
+            </div>
+            <p id="audio-gift-status" class="field-hint" role="status"></p>
+          </div>
+
+          <label class="toggle-row" style="margin-top:20px">
+            <span><strong>Tự động phát nhạc nền</strong><small>Nhạc thiền tự phát khi mở màn hình chánh điện.</small></span>
+            <input id="musicEnabled" type="checkbox" role="switch">
+          </label>
+
+          <div class="range-label">
+            <label for="musicVolume">Âm lượng nhạc nền thiền</label>
+            <output id="musicVolume-output">20%</output>
+          </div>
+          <input id="musicVolume" type="range" min="0" max="1" step="0.02" value="0.2">
+
+          <div class="range-label">
+            <label for="volume">Âm lượng chuông & giọng đọc cảm ơn</label>
+            <output id="volume-output">35%</output>
+          </div>
+          <input id="volume" type="range" min="0" max="1" step="0.05" value="0.35">
+        </article>
+
+        <!-- Giọng đọc AI & Mẫu cảm ơn -->
+        <article class="card">
+          <div class="card-heading">
+            <div>
+              <span class="section-kicker">TRI ÂN TẤM LÒNG</span>
+              <h2>Giọng đọc tiếng Việt AI tự động</h2>
+            </div>
+          </div>
+
+          <label class="toggle-row">
+            <span><strong>Đọc lời cảm ơn người tặng quà</strong><small>Gọi tên người dâng quà và đọc kèm một câu chúc ngẫu nhiên.</small></span>
+            <input id="speech" type="checkbox" role="switch">
+          </label>
+
+          <label for="voice">Lựa chọn giọng đọc truyền cảm</label>
+          <div class="voice-row">
+            <select id="voice">
+              <option value="vi-VN-HoaiMyNeural">Hoài My · Giọng nữ truyền cảm, dịu dàng</option>
+              <option value="vi-VN-NamMinhNeural">Nam Minh · Giọng nam ấm áp, trang trọng</option>
+            </select>
+            <button id="test-voice" class="button secondary" type="button">♫ Nghe thử giọng đọc</button>
+          </div>
+
+          <label for="thanksTemplate">Mẫu câu cảm ơn dâng hương</label>
+          <textarea id="thanksTemplate" rows="3"></textarea>
+          <p class="field-hint">
+            Dùng các biến: <code>{name}</code> tên người dâng · <code>{wish}</code> câu chúc · <code>{gift}</code> món quà · <code>{count}</code> số lượng · <code>{prayer}</code> lời cầu.
+          </p>
+
+          <div class="range-label">
+            <label for="wishes">Kho câu chúc ngẫu nhiên</label>
+            <span id="wish-count" class="subtle">20 câu</span>
+          </div>
+
+          <!-- Bộ Preset nạp nhanh câu chúc (MỚI) -->
+          <div class="preset-wishes-bar">
+            <span style="font-size:11px;color:var(--muted);align-self:center">Nạp mẫu nhanh:</span>
+            <button class="preset-btn" data-preset="binh_an" type="button">🌸 Cầu Bình An & Sức Khỏe</button>
+            <button class="preset-btn" data-preset="tai_loc" type="button">💰 Cầu Tài Lộc & Làm Ăn</button>
+            <button class="preset-btn" data-preset="thi_cu" type="button">📚 Cầu Thi Cử & Học Hành</button>
+            <button class="preset-btn" data-preset="tong_hop" type="button">✨ Bộ Tổng Hợp Chuẩn</button>
+          </div>
+
+          <textarea id="wishes" rows="8"></textarea>
+          <p class="field-hint">Mỗi dòng là một câu chúc riêng biệt. Hệ thống tự động chọn ngẫu nhiên và tránh lặp lại.</p>
+        </article>
+      </section>
+
+      <!-- ====================================================
+           5. TAB QUÀ TẶNG & LỜI CẦU
+           ==================================================== -->
+      <section class="view" id="view-gifts" aria-label="Quà & lời cầu" hidden>
+        <article class="card">
+          <div class="card-heading">
+            <div>
+              <span class="section-kicker">4 Ô QUÀ BÊN TRÁI MÀN HÌNH LIVE</span>
+              <h2>Chọn icon quà & Lời cầu hiển thị</h2>
+            </div>
+            <span class="save-state">Tự lưu</span>
+          </div>
+          <p class="field-hint">
+            Mỗi ô chọn 1 icon và sửa câu lời cầu. Khi người xem dâng món quà tương ứng, hệ thống sẽ tự động ghép lời nguyện đó lên bảng lễ.
+          </p>
+          <div id="gift-slot-picker"></div>
+        </article>
+
+        <article class="card" hidden>
+          <div class="card-heading">
+            <div>
+              <span class="section-kicker">MỖI MÓN QUÀ, MỘT LỜI NGUYỆN</span>
+              <h2>Quy tắc quà tặng bổ sung</h2>
+            </div>
+            <button id="add-rule" class="button secondary" type="button">＋ Thêm quy tắc</button>
+          </div>
+          <div class="rule-head">
+            <span>TÊN QUÀ TIKTOK</span>
+            <span>LỜI CẦU HIỂN THỊ</span>
+            <span></span>
+          </div>
+          <div id="rules"></div>
+          <div class="received-gifts">
+            <strong>Quà nhận được trong phiên:</strong>
+            <div id="seen-gifts" class="chips" style="margin-top:10px"></div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ====================================================
+           6. TAB BÀN PHÍM TEST & MÔ PHỎNG NÂNG CAO (MỚI)
+           ==================================================== -->
+      <section class="view" id="view-simulator" aria-label="Bàn phím & Mô phỏng" hidden>
+        <article class="card">
+          <div class="card-heading">
+            <div>
+              <span class="section-kicker">TEST LIVE CHỦ ĐỘNG</span>
+              <h2>Mô phỏng tặng quà tùy chỉnh nâng cao</h2>
+            </div>
+            <span class="quiet-badge">Mô Phỏng Quà</span>
+          </div>
+          <p class="muted">Kiểm tra ngay hiệu ứng dâng lễ, avatar xoay trong sen vàng, chuông và giọng đọc mà không cần kết nối TikTok:</p>
+
+          <div class="action-box">
+            <div class="action-box-title">🎁 TẠO SỰ KIỆN TẶNG QUÀ MẪU:</div>
+            <div class="custom-sim-grid">
+              <div>
+                <label style="margin:0 0 4px">Tên người dâng</label>
+                <input id="sim-sender-name" type="text" placeholder="Minh Anh" value="Minh Anh">
+              </div>
+              <div>
+                <label style="margin:0 0 4px">Loại quà tặng</label>
+                <select id="sim-gift-type">
+                  <option value="Rose">Hoa hồng (Rose - 1 xu)</option>
+                  <option value="Finger Heart">Bắn tim (Finger Heart - 5 xu)</option>
+                  <option value="TikTok">Logo TikTok (1 xu)</option>
+                  <option value="Peach">Trái đào may mắn (Peach)</option>
+                  <option value="Lion">Sư tử vàng lớn (Lion - Quà VIP)</option>
+                  <option value="Dragon">Rồng vàng uy nghi (Dragon)</option>
+                </select>
+              </div>
+              <div>
+                <label style="margin:0 0 4px">Số lượng dâng</label>
+                <input id="sim-gift-count" type="number" min="1" max="9999" value="1">
+              </div>
+              <div style="align-self: flex-end;">
+                <button id="btn-fire-custom-gift" class="button gold" type="button">✨ Dâng lễ ngay</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Thử hiệu ứng cơ bản -->
+        <article class="card">
+          <div class="card-heading">
+            <div>
+              <span class="section-kicker">HỆ THỐNG MẪU SỰ KIỆN</span>
+              <h2>Thử hiệu ứng người xem & Chánh điện</h2>
+            </div>
+          </div>
+          <p class="muted">Bấm các nút dưới đây để kiểm tra hoạt ảnh đi lại, cắm hương, bái lạy của nhân vật:</p>
+          <div class="demo-grid">
+            <button data-demo="crowd" type="button"><span>👥</span><strong>Gán tên đầy đủ người ngồi</strong></button>
+            <button data-demo="join" type="button"><span>🚪</span><strong>Người mới vào phòng</strong></button>
+            <button data-demo="chat" type="button"><span>💬</span><strong>Một bình luận ngẫu nhiên</strong></button>
+            <button data-demo="gift" type="button"><span>🌹</span><strong>Dâng hoa hồng thường</strong></button>
+            <button data-demo="big" type="button"><span>✨</span><strong>Quà lớn (Sen vàng tri ân)</strong></button>
+            <button data-demo="walk" type="button"><span>🙏</span><strong>Đi lại & Cắm hương</strong></button>
+            <button data-demo="comments" type="button"><span>☏</span><strong>Nhiều bình luận cùng lúc</strong></button>
+          </div>
+        </article>
+      </section>
+
+      <!-- ====================================================
+           7. TAB HƯỚNG DẪN CHI TIẾT
+           ==================================================== -->
+      <section class="view" id="view-guide" aria-label="Hướng dẫn sử dụng" hidden>
+        <article class="card guide-intro">
+          <span class="section-kicker">PHẬTMT PRO · HỆ THỐNG LIVE STREAM</span>
+          <h2>Hướng dẫn sử dụng chi tiết từ A–Z</h2>
+          <p class="muted">
+            Vận hành mượt mà mỗi buổi LIVE. Phát triển & Hỗ trợ kỹ thuật: <strong>Đức Quân · Zalo: 0329 024 876 (Nhận làm mọi tools)</strong>.
+          </p>
+        </article>
+
+        <article class="card guide-steps">
+          <h2>1. Cài đặt và sử dụng</h2>
+          <ol>
+            <li>Giải nén trọn vẹn thư mục <code>PhatMTV3</code> trên máy Windows 10/11.</li>
+            <li>Bấm đúp <code>BAT_DAU.bat</code> để chạy. Trình duyệt tự mở bảng điều khiển <code>http://localhost:3002/</code>.</li>
+            <li>Tool đã được mở khóa vĩnh viễn (gỡ bỏ key hoàn toàn), mở lên là vào thẳng giao diện dùng ngay.</li>
+          </ol>
+        </article>
+
+        <article class="card guide-steps">
+          <h2>2. Kết nối với TikTok qua TikFinity Desktop</h2>
+          <ol>
+            <li>Tải và cài TikFinity Desktop từ trang chính thức.</li>
+            <li>Nhập @username kênh TikTok đang phát LIVE và bấm Connect trong TikFinity.</li>
+            <li>Quay lại giao diện PhậtMT Pro, chọn <b>Tổng quan</b> → bấm nút <b>Kết nối TikFinity</b>.</li>
+          </ol>
+        </article>
+
+        <article class="card guide-steps">
+          <h2>3. Đưa vào OBS hoặc TikTok LIVE Studio</h2>
+          <ol>
+            <li>Thêm nguồn <b>Browser Source</b> (Nguồn trình duyệt / Liên kết).</li>
+            <li>Dán URL: <code>http://localhost:3002/overlay.html</code>.</li>
+            <li>Đặt kích thước nguồn: Rộng <b>1080 px</b>, Cao <b>1920 px</b> (Tỷ lệ dọc 9:16).</li>
+            <li>Bật âm thanh của nguồn trình duyệt trong phần mềm LIVE.</li>
+          </ol>
+          <div class="source-size">
+            <span>CHIỀU RỘNG<strong>1080 px</strong></span>
+            <span>CHIỀU CAO<strong>1920 px</strong></span>
+          </div>
+          <div class="copy-line">
+            <code id="guide-url">http://localhost:3002/overlay.html</code>
+            <button class="button secondary" data-copy-live type="button">Sao chép</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>11. Xử lý lỗi thường gặp</h2>
+          <details class="faq">
+            <summary>Làm sao đổi giao diện theo phong cách riêng?</summary>
+            <p>Bấm chọn các nút giao diện ở góc trên bên phải (Kim, Ngọc, Sen, Hoàng) để chuyển đổi tức thì theme bạn thích.</p>
+          </details>
+          <details class="faq">
+            <summary>TikFinity mở rồi nhưng chưa hiện bình luận?</summary>
+            <p>Kiểm tra TikFinity Desktop chạy trên cùng máy tính và tài khoản TikTok đó đang thực sự phát sóng trực tiếp.</p>
+          </details>
+          <details class="faq">
+            <summary>Âm thanh không phát khi người xem tặng quà?</summary>
+            <p>Bật công tắc "Đọc cảm ơn người tặng quà", kiểm tra thanh âm lượng và nhấp chuột vào nguồn màn hình LIVE một lần.</p>
+          </details>
+        </article>
+      </section>
+
+      <!-- ====================================================
+           8. TAB LIÊN HỆ ĐỨC QUÂN (HỖ TRỢ & MOD TOOL)
+           ==================================================== -->
+      <section class="view" id="view-support" aria-label="Liên hệ hỗ trợ" hidden>
+        <article class="card support-card">
+          <div class="support-seal">ĐQ</div>
+          <span class="section-kicker">CHUYÊN GIA PHẦN MỀM & TOOL LIVESTREAM</span>
+          <h2>Đức Quân</h2>
+          <p class="muted">Lập trình viên · Thiết kế công cụ tương tác & Tự động hóa</p>
+
+          <div class="service-callout">
+            <span class="service-icon">⚡</span>
+            <div>
+              <strong>NHẬN LÀM MỌI TOOLS THEO YÊU CẦU</strong>
+              <p>Chuyên thiết kế tool TikTok LIVE tương tác, bot game OBS, tool marketing, automation, cào dữ liệu, mod giao diện độc quyền theo ý tưởng riêng. Uy tín - Tận tâm - Bảo hành dài lâu!</p>
+            </div>
+          </div>
+
+          <a class="support-phone" href="https://zalo.me/0329024876" target="_blank" rel="noopener">Zalo: 0329 024 876</a>
+
+          <div class="support-actions">
+            <a class="button gold" href="https://zalo.me/0329024876" target="_blank" rel="noopener">Nhắn tin Zalo hỗ trợ ↗</a>
+            <button id="copy-phone" class="button secondary" type="button">Sao chép số Zalo</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-heading">
+            <h2>Dịch vụ lập trình & Đồng hành cùng Streamer</h2>
+          </div>
+          <div class="support-services-grid">
+            <div class="service-item">
+              <span class="service-bullet">✦</span>
+              <div>
+                <strong>Mod giao diện & Nhân vật LIVE:</strong> Thay đổi nhân vật 3D/2D, áo pháp phục, tượng Phật, hoạt ảnh cắm hương, cảnh quan chùa chiền theo phong cách riêng của bạn.
+              </div>
+            </div>
+            <div class="service-item">
+              <span class="service-bullet">✦</span>
+              <div>
+                <strong>Lập trình Tool TikTok / MMO theo yêu cầu:</strong> Nhận viết mọi tool tương tác, mini game livestream, tool cào data khách hàng, tool reup, bot tự động...
+              </div>
+            </div>
+            <div class="service-item">
+              <span class="service-bullet">✦</span>
+              <div>
+                <strong>Cài đặt & Hỗ trợ kỹ thuật 24/7:</strong> Hỗ trợ UltraViewer / AnyDesk từ xa trực tiếp, hướng dẫn cấu hình OBS / TikTok LIVE Studio nét căng, mượt mà.
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+    </div>
+
+    <!-- ====================================================
+         CỘT XEM TRƯỚC MÀN HÌNH LIVE (PREVIEW MONITOR)
+         ==================================================== -->
+    <aside class="preview-column">
+      <div class="preview-label">
+        <span><i></i> XEM TRƯỚC MÀN HÌNH CHÁNH ĐIỆN</span>
+        <b>9:16 LIVE</b>
+      </div>
+
+      <!-- KHUNG ĐIỆN THOẠI PREVIEW CHÁNH ĐIỆN -->
+      <div class="preview">
+        <iframe title="Xem trước chánh điện" src="/overlay.html?preview=1&v=3.1.2"></iframe>
+      </div>
+
+      <!-- BỘ ĐIỀU KHIỂN KÉO THẢ BỐ CỤC -->
+      <div class="layout-controls">
+        <button id="layout-edit" class="button gold" type="button" aria-pressed="false">✥ Chỉnh vị trí & kích thước</button>
+        <button id="layout-reset" class="button secondary" type="button">Về mặc định</button>
+        <p id="layout-message" role="status">Bật chỉnh sửa: Kéo thả các bảng để di chuyển; kéo góc ↘ để đổi kích thước.</p>
+      </div>
+
+      <div class="preview-caption">
+        <span>Độ phân giải: 1080 × 1920 px</span>
+        <span>Xem trước không phát tiếng</span>
+      </div>
+
+      <div class="preview-note">
+        <strong>Một liên kết duy nhất cho OBS / Studio:</strong>
+        <p>Thêm trực tiếp liên kết dưới đây vào nguồn trình duyệt (Browser Source) trong OBS hoặc TikTok LIVE Studio.</p>
+        <button class="copy-url" data-copy-live type="button">
+          <span>http://localhost:3002/overlay.html</span>
+          <span>▣</span>
+        </button>
+        <div style="margin-top:10px">
+          <a href="#guide" class="inline-link">Xem lại hướng dẫn setup OBS ↗</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>PHẬTMT PRO STUDIO</span>
+    <span>Chủ tool & Phát triển: <strong>Đức Quân</strong> · Zalo: <a href="https://zalo.me/0329024876" target="_blank" rel="noopener">0329 024 876</a> · <em>⚡ Nhận làm mọi tools</em></span>
+    <span id="saved">Mọi cài đặt được lưu tự động</span>
+  </footer>
+</main>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="/panel.js"></script>
+</body>
+</html>
